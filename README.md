@@ -1,53 +1,81 @@
 # Clec7a+ myeloid states after spinal cord injury
 
-Analysis code for **Integrated transcriptomic analyses characterize a late-stage Clec7a+ lipid-associated myeloid state after spinal cord injury**.
+This repository contains the analysis code used for the manuscript **“Integrated transcriptomic analyses characterize a late-stage Clec7a+ lipid-associated myeloid state after spinal cord injury.”**
 
-## Data and environment
+The study integrates single-cell RNA sequencing, bulk RNA sequencing, spatial transcriptomics, cell-cell communication analysis, transcriptional regulatory-network analysis, and an independent validation cohort to characterize Clec7a+ myeloid states after spinal cord injury.
 
-Public datasets: GSE162610, GSE196928, Figshare 17702045, GSE195783 and GSE281205. Accessions and study roles are listed in `public_datasets.csv`; analysis settings, random seeds and software versions are recorded in the corresponding root-level CSV files.
+## Data availability
 
-Raw data and large intermediate objects are not included. Supply the inputs required by each script, including reference gene sets where used, and adapt the local data, Python environment and font paths to your machine. Manuscript Supplementary Tables contain the released tabular results.
+All datasets analyzed in this study are publicly available. Dataset accession numbers and their roles in the study are summarized in [`public_datasets.csv`](public_datasets.csv).
 
-## Path configuration
+The principal datasets include GSE162610, GSE196928, Figshare 17702045, GSE195783, and GSE281205.
 
-Scripts are intended to be run from the repository root. Local machine-specific paths are not hard-coded. By default, the repository root is used as the project root; alternative locations can be supplied through the following environment variables:
+Raw sequencing data and large intermediate analysis objects are not duplicated in this repository. Sample metadata, gene-set information, differential-expression results, enrichment results, spatial-analysis results, regulon-related results, and other supporting tabular data are provided in the Supplementary Tables accompanying the manuscript.
 
-- `SCI_PROJECT_ROOT`: project/data root
-- `SCI_REFERENCE_DIR`: external reference-data directory (defaults to `<project root>/reference`)
-- `PYSCENIC_PYTHON`: Python executable used for pySCENIC (defaults to `python` on `PATH`)
-- `SCI_FONT_REGULAR` / `SCI_FONT_BOLD`: optional font-file paths for figure scripts; if unset, the scripts fall back to the default sans-serif font
+## Directory structure
 
-Large input and intermediate files are not included in the repository. Reference resources should be downloaded separately and placed under the configured reference directory where required by the relevant script.
+Analysis scripts are organized according to the major analytical components of the study. Script numbers approximately reflect the order of the computational workflow.
 
-## Analysis scripts
+1. [`scripts/atlas`](scripts/atlas) — single-cell input checks, quality control, DecontX correction, doublet detection, Harmony integration, and major-cell-type annotation. These analyses provide the basis for **Figure 1** and Supplementary Figure S1.
+2. [`scripts/myeloid`](scripts/myeloid) — myeloid-cell extraction and reclustering, state annotation, temporal characterization, lipid-metabolism AUCell scoring, differential-expression analysis, functional enrichment, and Monocle3 trajectory analysis. These analyses provide the basis for **Figure 2** and Supplementary Figure S2.
+3. [`scripts/bulk_wgcna`](scripts/bulk_wgcna) — bulk RNA-seq quality control, temporal differential-expression analysis, Clec7a-signature GSEA, functional enrichment, and WGCNA. These analyses provide the basis for **Figure 3**.
+4. [`scripts/spatial`](scripts/spatial) — Visium data import and quality control, spatial clustering and region annotation, RCTD mapping, spatial autocorrelation, and Clec7a–lipid-program spatial coupling. These analyses provide the basis for **Figure 4**.
+5. [`scripts/cellchat`](scripts/cellchat) — CellChat analysis of intercellular communication involving the identified myeloid states. These analyses provide the basis for **Figure 5**.
+6. [`scripts/regulatory`](scripts/regulatory) — pySCENIC input preparation, GRNBoost2, cisTarget pruning, regulon AUCell scoring, regulon specificity analysis, TF-target networks, TF-gene correlations, virtual knockout, and downstream enrichment analysis. These analyses provide the basis for **Figure 6**.
+7. [`scripts/external_cohort`](scripts/external_cohort) — independent validation using GSE281205, including quality control, lineage annotation, myeloid-state analysis, and pseudobulk validation. These analyses provide the basis for **Supplementary Figure S4**.
+8. [`scripts/sensitivity`](scripts/sensitivity) — sensitivity and robustness analyses for single-cell integration, differential expression, trajectory inference, bulk/WGCNA, spatial analysis, CellChat, and regulatory-network analyses.
+9. [`scripts/figures`](scripts/figures) — scripts used to generate the main and supplementary figures from the outputs of the corresponding upstream analyses.
+10. [`scripts/helpers`](scripts/helpers) — shared R and Python helper functions used by multiple analysis steps.
 
-| Directory | Analysis |
-| --- | --- |
-| `scripts/atlas` | Input checks, QC, integration and major cell types |
-| `scripts/myeloid` | Myeloid states, differential expression and trajectories |
-| `scripts/bulk_wgcna` | Bulk RNA-seq and WGCNA |
-| `scripts/spatial` | Visium, RCTD and spatial associations |
-| `scripts/cellchat` | Cell communication |
-| `scripts/regulatory` | pySCENIC and network perturbation |
-| `scripts/external_cohort` | Independent GSE281205 validation |
-| `scripts/sensitivity` | Sensitivity analyses |
-| `scripts/figures` | Main and supplementary figures |
-| `scripts/helpers` | Shared R utilities and Python programs |
+## Running the analyses
 
-Run scripts from the repository root, starting with the input check:
-
-```sh
+Scripts are intended to be run from the repository root. The workflow begins with the single-cell input check:
+```
 Rscript scripts/atlas/01_dataset_check.R
 ```
 
-Step numbers identify the study workflow. Each script lists its input objects; complete those upstream steps before running the corresponding analysis or figure. Interpretation notes are collected in [ANALYSIS_NOTES.md](ANALYSIS_NOTES.md). Legacy prose-report files contain a pointer to these notes; QC tables, numerical outputs, session information and file paths remain available.
+Subsequent scripts should generally be run according to their numerical prefixes. Each script specifies the upstream objects or files required for that analysis.
 
-## Checks
+The major analytical workflow is:
+```
+single-cell atlas
+      ↓
+myeloid-state analysis
+      ↓
+bulk RNA-seq / WGCNA
+      ↓
+spatial transcriptomics
+      ↓
+CellChat
+      ↓
+regulatory-network analysis
+```
 
-```sh
+The independent-cohort and sensitivity analyses use outputs generated by the corresponding primary analyses. Figure-generation scripts use the processed outputs of these analytical steps.
+
+## Path configuration
+
+Machine-specific paths are not hard-coded in the analysis scripts. Central path configuration is provided in [`config.R`](config.R).
+
+By default, analyses use the repository root as the project root. Alternative locations can be supplied through the environment variables `SCI_PROJECT_ROOT`, `SCI_REFERENCE_DIR`, and `PYSCENIC_PYTHON`.
+
+External reference resources, including the cisTarget databases required for pySCENIC, should be downloaded separately and placed under the configured reference directory.
+
+## Reproducibility information
+
+Key analysis parameters are provided in [`analysis_parameters.csv`](analysis_parameters.csv), software versions in [`software_versions.csv`](software_versions.csv), and random seeds in [`random_seeds.csv`](random_seeds.csv).
+
+Additional step-specific notes are provided in [`ANALYSIS_NOTES.md`](ANALYSIS_NOTES.md).
+
+A repository-level validation script is available:
+```
 Rscript scripts/helpers/verify_release.R
 ```
 
-This checks R syntax, shared-function environments and synthetic spatial input alignment. It does not rerun the biological analyses.
+This performs syntax and selected consistency checks but does not rerun the complete biological analysis from raw data.
 
-The script organization draws on the published SCI companion repositories of [Milich et al. (2021)](https://github.com/JaeLeeLab/sci_scRNAseq) and [Brennan et al. (2022)](https://github.com/OSU-BMBL/Spinal-cord-scRNAseq).
+## Notes
+
+Large intermediate RDS, loom, and other processed objects are not included because of file size. They can be regenerated from the publicly available datasets using the corresponding analysis scripts.
+
+The Supplementary Tables accompanying the manuscript contain the released sample metadata, gene-set definitions, differential-expression results, enrichment outputs, spatial-analysis results, regulon-related results, and other supporting tabular data.
