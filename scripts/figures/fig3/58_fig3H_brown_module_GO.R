@@ -1,7 +1,6 @@
-source("scripts/helpers/common.R", local = TRUE)
-
 rm(list = ls())
 source("config.R", local = TRUE)
+source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
 options(warn = 1)

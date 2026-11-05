@@ -1,29 +1,25 @@
-
 # Central path configuration for reproducible execution.
 # Run scripts from the repository root, or set the environment variables below.
 
-
 # Project paths
-
 PROJECT_ROOT <- Sys.getenv(
   "SCI_PROJECT_ROOT",
   unset = normalizePath(".", winslash = "/", mustWork = FALSE)
 )
-
 PROJECT_ROOT <- normalizePath(PROJECT_ROOT, winslash = "/", mustWork = FALSE)
 
-
 RESULTS_DIR <- file.path(PROJECT_ROOT, "results")
-
 
 REFERENCE_DIR <- Sys.getenv(
   "SCI_REFERENCE_DIR",
   unset = file.path(PROJECT_ROOT, "reference")
 )
-
 REFERENCE_DIR <- normalizePath(REFERENCE_DIR, winslash = "/", mustWork = FALSE)
 
-PYSCENIC_PYTHON <- Sys.getenv("PYSCENIC_PYTHON", unset = Sys.which("python"))
+PYSCENIC_PYTHON <- Sys.getenv(
+  "PYSCENIC_PYTHON",
+  unset = Sys.which("python")
+)
 
 FONT_REGULAR <- Sys.getenv("SCI_FONT_REGULAR", unset = "")
 FONT_BOLD <- Sys.getenv("SCI_FONT_BOLD", unset = "")
@@ -39,10 +35,3 @@ reference_path <- function(path = "") {
   if (!nzchar(path)) return(REFERENCE_DIR)
   paste0(sub("/+$", "", REFERENCE_DIR), "/", sub("^/+", "", path))
 }
-
-
-PYSCENIC_PYTHON <- Sys.getenv(
-  "PYSCENIC_PYTHON",
-  unset = Sys.which("python")
-)
-
