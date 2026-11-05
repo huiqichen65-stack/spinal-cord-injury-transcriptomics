@@ -65,8 +65,6 @@ External reference resources, including the cisTarget databases required for pyS
 
 Key analysis parameters are provided in [`analysis_parameters.csv`](analysis_parameters.csv), software versions in [`software_versions.csv`](software_versions.csv), and random seeds in [`random_seeds.csv`](random_seeds.csv).
 
-Additional step-specific notes are provided in [`ANALYSIS_NOTES.md`](ANALYSIS_NOTES.md).
-
 A repository-level validation script is available:
 ```
 Rscript scripts/helpers/verify_release.R
