@@ -1,0 +1,30 @@
+analysis,parameter,value,source
+single_cell_atlas,minimum detected genes,300,Methods: Single-cell quality control
+single_cell_atlas,maximum mitochondrial transcript proportion,<10%,Methods: Single-cell quality control
+single_cell_atlas,normalization,"LogNormalize; scale factor 10,000",Methods: Single-cell quality control
+single_cell_atlas,variable genes,"3,000",Methods: Single-cell quality control
+single_cell_atlas,Harmony batch variable,source_dataset,Methods: Single-cell quality control
+single_cell_atlas,major-lineage clustering,30 Harmony dimensions; resolution 0.4,Methods: Single-cell quality control
+myeloid,retained-state clustering resolution,0.10,Methods: Myeloid subclustering
+myeloid_DE,test / min.pct,Seurat Wilcoxon / 0.10,Methods: Differential expression
+myeloid_DE,reported-gene threshold,BH adjusted P < 0.05 and |log2FC| > 0.25,Methods: Differential expression
+lipid_scoring,AUCell ranking fraction,top 5% of ranked genes,Methods: Differential expression and lipid scoring
+bulk_DE,primary comparison,14+28 dpi vs uninjured+15 min+1+3 dpi,Methods: Bulk RNA-seq
+bulk_DE,model,limma; group + operational-group terms; arrayWeights; eBayes trend=TRUE robust=TRUE,Methods: Bulk RNA-seq
+WGCNA,network,signed biweight-midcorrelation,Methods: WGCNA
+WGCNA,soft-threshold power,14,Methods: WGCNA
+WGCNA,minimum module size,30,Methods: WGCNA
+WGCNA,deepSplit / merge height,2 / 0.25,Methods: WGCNA
+spatial,neighborhood radius,1.55 × within-portion median nearest-neighbor distance,Methods: Spatial autocorrelation
+spatial,Moran I permutations,499 per portion; one-sided positive autocorrelation,Methods: Spatial autocorrelation
+spatial,matched negative controls,500 matched sets; 37 genes per set,Methods: Spatial autocorrelation
+CellChat,database categories,secreted signaling; ECM-receptor; cell-contact,Methods: CellChat
+CellChat,estimator / bootstrap / min group,triMean / 100 / 10,Methods: CellChat
+CellChat,population-size weighting,none,Methods: CellChat
+pySCENIC,version,0.12.1,Methods: pySCENIC
+pySCENIC,cells / genes,"up to 3,000 cells per myeloid state; 9,505 selected genes",Methods: pySCENIC
+pySCENIC,motif database,mouse mm10 cisTarget ranking databases,Methods: pySCENIC
+scTenifoldKnk,version,1.0.3,Methods: scTenifoldKnk
+scTenifoldKnk,network genes,"up to 5,000 variable genes with mandatory candidate TF and 20-gene panel inclusion",Methods: scTenifoldKnk
+scTenifoldKnk,network construction,10 networks × 500 sampled cells; nComp=3,Methods: scTenifoldKnk
+external_validation,young specimens,3 at 14 dpi and 3 at 28 dpi,Methods: Independent validation

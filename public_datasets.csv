@@ -1,0 +1,6 @@
+accession,repository,role
+GSE162610,GEO,discovery scRNA-seq
+GSE196928,GEO,discovery scRNA-seq; vehicle B1/B3/B7 retained
+17702045,Figshare,discovery scRNA-seq and bulk RNA-seq
+GSE195783,GEO,Visium spatial transcriptomics
+GSE281205,GEO,independent young-mouse scRNA-seq validation

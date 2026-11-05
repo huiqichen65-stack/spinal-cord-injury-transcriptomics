@@ -1,0 +1,15 @@
+*.rds
+*.RDS
+*.RData
+*.loom
+*.mtx
+*.mtx.gz
+*.tar
+*.tgz
+*.zip
+.Rhistory
+.Rproj.user/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
