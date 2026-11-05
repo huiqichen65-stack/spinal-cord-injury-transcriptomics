@@ -64,7 +64,6 @@ External reference resources, including the cisTarget databases required for pyS
 
 Key analysis parameters are provided in [`analysis_parameters.csv`](analysis_parameters.csv), R/package versions recovered from analysis sessions in [`software_versions.csv`](software_versions.csv), and random seeds in [`random_seeds.csv`](random_seeds.csv). The regulatory scripts explicitly require pySCENIC 0.12.1 and record Python-side package versions through the environment-probe helper scripts when those steps are run.
 
-
 A repository-level validation script is available:
 ```
 Rscript scripts/helpers/verify_release.R
