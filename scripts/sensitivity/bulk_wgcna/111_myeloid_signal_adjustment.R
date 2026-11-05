@@ -1099,7 +1099,7 @@ analysis_object <- list(step = 111L, version = "v01", purpose = paste("Test whet
 ANALYSIS_OBJECT_FILE <- file.path(RDS_DIR, paste0(PREFIX, "_analysis_object.rds"))
 saveRDS(analysis_object, ANALYSIS_OBJECT_FILE, compress = "xz")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, paste0(PREFIX, "_REPORT.txt")), useBytes = TRUE)
 
 writeLines(capture.output(utils::sessionInfo()), file.path(OUT_DIR, paste0(PREFIX, "_sessionInfo.txt")),

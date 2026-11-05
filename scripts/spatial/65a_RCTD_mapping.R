@@ -1024,7 +1024,7 @@ REPORT_FILE <- file.path(OUT_DIR, paste0("10_65_GSE195783_RCTD_REPORT_", VERSION
 
 report_con <- file(REPORT_FILE, open = "wt", encoding = "UTF-8")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = report_con)
 
 close(report_con)

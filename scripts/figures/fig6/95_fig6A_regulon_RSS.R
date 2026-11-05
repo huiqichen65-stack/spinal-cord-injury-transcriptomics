@@ -139,7 +139,7 @@ if (any(qc$status == "FAIL")) {
   stop("Step95 contains blocking QC FAIL item(s).")
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 print(rss[seq_len(topN), c("RSS_rank", "TF", "regulon", "target_RSS"), drop = FALSE], row.names = FALSE)

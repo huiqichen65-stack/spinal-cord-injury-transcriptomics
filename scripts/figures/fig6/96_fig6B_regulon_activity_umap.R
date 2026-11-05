@@ -494,5 +494,5 @@ if (any(final_qc$status == "FAIL")) {
     stop("Step96 contains blocking QC FAIL item(s).")
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)

@@ -403,7 +403,7 @@ if (length(unstable_samples) == 0L) {
         collapse = " | "), ". Primary audit still identified four major components in every capture area.")
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = REPORT_FILE, useBytes = TRUE)
 
 print(section_manifest[, c("sample_label", "timepoint", "section_position_internal", "section_uid_internal", 

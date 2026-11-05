@@ -354,7 +354,7 @@ overall_status <- if (n_fail > 0) {
   "PASS"
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 output_files <- c(resource_qc_file, environment_versions_file, preflight_qc_file, command_file, log_file, 

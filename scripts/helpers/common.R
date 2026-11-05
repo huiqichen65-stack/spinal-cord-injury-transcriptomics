@@ -38,7 +38,13 @@ require_package <- function (pkg)
 
 log_separator <- function (char = "=", n = 90) 
 {
-    log_msg(paste(rep(char, n), collapse = ""))
+    line <- paste(rep(char, n), collapse = "")
+    if (exists("log_file", inherits = TRUE)) {
+        write_log(line)
+    }
+    else {
+        cat(line, "\n")
+    }
 }
 
 write_log <- function (...) 

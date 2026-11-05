@@ -594,7 +594,7 @@ write_csv_utf8(final_qc, QC_FILE)
 REPORT_FILE <- file.path(OUT_DIR, paste0("08_67_GSE195783_spatial_section_identity_audit_REPORT_", VERSION, 
     ".txt"))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = REPORT_FILE, useBytes = TRUE)
 
 print(primary_df)

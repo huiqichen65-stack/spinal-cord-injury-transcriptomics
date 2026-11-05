@@ -457,7 +457,7 @@ run <- function() {
     fill = "Grouping"), "Fig_130_PCA_Harmony_GSM_stage_variance_v02.png", 9, 6)
 
   cl_counts <- vapply(fields, function(f) length(unique(as.character(md[[f]]))), integer(1))
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "15_130_REPORT_v02.txt"), useBytes = TRUE)
   writeLines(capture.output(sessionInfo()), file.path(OUT, "16_130_sessionInfo_v02.txt"), useBytes = TRUE)
   output_files <- list.files(OUT, full.names = TRUE, recursive = TRUE, include.dirs = FALSE)

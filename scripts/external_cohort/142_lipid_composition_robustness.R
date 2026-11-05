@@ -372,7 +372,7 @@ for (i in seq_len(nrow(co_summary))) {
 for (stage in c(14L, 28L)) {
   x <- lipid_summ[lipid_summ$dpi == stage & lipid_summ$status == "complete_exploratory", ]
 }
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "11_142_REPORT_v01.txt"), useBytes = TRUE)
 limits <- c("LIMITATIONS AND METHODS | Step142 v01", "Biological unit: GEO GSM/sample-library, not individual cells.",
   "Independent animals: NOT verified from the identifiers by this script.", "Groups are from Step131; no new clustering or identity redefinition.",

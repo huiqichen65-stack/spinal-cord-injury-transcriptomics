@@ -368,7 +368,7 @@ overall_status <- if (n_fail > 0) {
 
 target_selected <- selection_long[selection_long$state == formal_target_state, , drop = FALSE]
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 print(target_selected[, c("state_rank", "TF", "row_Z", "mean_AUC"), drop = FALSE], row.names = FALSE)

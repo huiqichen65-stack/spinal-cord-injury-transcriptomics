@@ -279,7 +279,7 @@ rep_lines <- apply(rep_sections, 1, function(z) {
 
 REPORT_FILE <- file.path(OUT_DIR, paste0("07_70_Figure4B_REPORT_", VERSION, ".txt"))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = REPORT_FILE, useBytes = TRUE)
 
 print(rep_sections[, c("timepoint", "sample_label", "section_position_internal", "section_uid_internal")])

@@ -455,5 +455,5 @@ plot_qc <- data.frame(metric = c("Step46_source", "contrasts_n", "tested_genes_p
 
 write_csv(plot_qc, paste0("04_", PREFIX, "_plot_QC.csv"))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT_DIR, paste0("05_", PREFIX, "_REPORT.txt")), useBytes = TRUE)

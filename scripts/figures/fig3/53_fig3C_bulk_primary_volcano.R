@@ -358,5 +358,5 @@ write_csv(label_audit, paste0("03_", PREFIX, "_highlight_gene_audit.csv"))
 write_csv(label_df[, c("gene_id", "gene_symbol_restored", "biological_group", "logFC", "adj.P.Val", "minus_log10_FDR", 
     "status"), drop = FALSE], paste0("04_", PREFIX, "_labeled_genes.csv"))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, paste0("05_", PREFIX, "_REPORT.txt")), useBytes = TRUE)

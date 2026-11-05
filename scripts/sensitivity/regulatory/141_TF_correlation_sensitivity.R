@@ -638,7 +638,7 @@ qc <- data.frame(check = c("required_input_files", "frozen_Figure6E_10_TF_20_gen
 
 write_csv(qc, "07_141_FINAL_QC_v03.csv")
 
-write_txt("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+write_txt("Numerical results are provided in the accompanying output tables.", 
     "08_141_REPORT_v03.txt")
 write_txt(capture.output(sessionInfo()), "09_141_sessionInfo_v03.txt")
 

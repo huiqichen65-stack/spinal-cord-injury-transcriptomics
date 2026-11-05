@@ -866,7 +866,7 @@ adjusted_brown_phase <- if (nrow(brown_adj_row) > 0L) {
   get_association_row(phase_association_all, "batch_adjusted_expression_all_samples", as.character(brown_adj_row$matched_alternative_module))
 } else NULL
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT_DIR, paste0("22_", PREFIX, "_REPORT.txt")), useBytes = TRUE)
 
 sink(file.path(OUT_DIR, paste0("23_", PREFIX, "_sessionInfo.txt")))

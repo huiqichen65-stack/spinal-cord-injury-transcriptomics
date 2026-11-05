@@ -874,7 +874,7 @@ write_tab(data.frame(item = c("R", "root", "new_output_dir", "network_workers", 
   3, 3, as.character(RUN_SOURCE_SPECIFIC), if (requireNamespace("scTenifoldNet", quietly = TRUE)) as.character(utils::packageVersion("scTenifoldNet")) else "missing",
   if (requireNamespace("scTenifoldKnk", quietly = TRUE)) as.character(utils::packageVersion("scTenifoldKnk")) else "missing",
   length(scenario_drs), format(Sys.time(), "%Y-%m-%d %H:%M:%S"))), "26_135_environment_parameters_v02.csv")
-write_text("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+write_text("Numerical results are provided in the accompanying output tables.", 
     "27_135_REPORT_v02.txt")
 files_out <- list.files(OUT, recursive = TRUE, full.names = TRUE)
 files_out <- files_out[!is.na(file.info(files_out)$isdir) & !file.info(files_out)$isdir]

@@ -397,7 +397,7 @@ saveRDS(meta, file.path(OUT_DIR, paste0(PREFIX, "_metadata_clean.rds")), compres
 saveRDS(list(expression = expr_mat, metadata = meta, sample_qc = sample_qc, matrix_qc = matrix_qc, expected_time_levels = EXPECTED_TIME_LEVELS),
   file.path(OUT_DIR, paste0(PREFIX, "_bulk_QC_bundle.rds")), compress = FALSE)
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT_DIR, paste0(PREFIX, "_REPORT.txt")))
 
 capture.output(sessionInfo(), file = file.path(OUT_DIR, paste0(PREFIX, "_sessionInfo.txt")))

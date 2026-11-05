@@ -294,7 +294,7 @@ target_lines <- apply(target_focus, 1, function(z) {
         "; n_capture_areas=", z[["n_capture_areas_total"]], "; region_spots=", z[["total_region_spots"]])
 })
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = REPORT_FILE, useBytes = TRUE)
 
 print(target_focus)

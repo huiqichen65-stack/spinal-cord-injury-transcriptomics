@@ -482,7 +482,7 @@ overall_status <- if (n_fail > 0) {
   "PASS"
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 output_files <- c(input_summary_file, environment_file, rss_matrix_file, rss_long_file, target_ranking_file,

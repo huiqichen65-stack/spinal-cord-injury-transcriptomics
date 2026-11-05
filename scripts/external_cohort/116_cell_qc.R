@@ -280,7 +280,7 @@ main <- function() {
     }
     tabtxt <- capture.output(print(sumtab[, c("gsm", "dpi", "raw_barcodes", "qc_retained", "qc_retention_percent", 
         "median_nFeature_after", "median_percent_mt_after")], row.names = FALSE))
-    writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+    writeLines("Numerical results are provided in the accompanying output tables.", 
         con = file.path(OUT_DIR, "08_116_REPORT_v02.txt"), useBytes = TRUE)
     writeLines(capture.output(utils::sessionInfo()), con = file.path(OUT_DIR, "09_116_sessionInfo_v02.txt"), 
         useBytes = TRUE)

@@ -475,7 +475,7 @@ writecsv(data.frame(parameter = c("version_R", "scTenifoldNet", "scTenifoldKnk",
   as.character(NETWORK_GENE_CAP), as.character(MIN_DETECTED_CELLS), as.character(N_MEAN_BINS), as.character(N_NET),
   as.character(N_CELLS), as.character(Q_NETWORK), as.character(K_TENSOR), as.character(MA_DIMENSIONS),
   as.character(USE_FGSEA), "135 v02 B00_seed9101_3000"), stringsAsFactors = FALSE), "11_143_environment_parameters_v01.csv")
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "12_143_REPORT_v01.txt"), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), file.path(OUT, "13_143_sessionInfo_v01.txt"), useBytes = TRUE)
 index_files <- list.files(OUT, recursive = TRUE, full.names = TRUE, include.dirs = FALSE)

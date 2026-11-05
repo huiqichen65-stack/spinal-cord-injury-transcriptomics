@@ -907,7 +907,7 @@ coverage_lines <- apply(gene_coverage, 1, function(x) {
         "/", x[["n_genes_requested"]], " genes; pass=", x[["coverage_pass"]])
 })
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT_DIR, paste0("11_114_REPORT_", VERSION, ".txt")), useBytes = TRUE)
 
 print(candidate_validation[, c("section_uid_internal", "n_spots", "normal_combined_median_z", "injury_combined_median_z", 

@@ -351,7 +351,7 @@ saveRDS(analysis_object, file.path(OUT_DIR, paste0(PREFIX, "_analysis_object.rds
 
 flagged <- outlier_df[outlier_df$review_flag, , drop = FALSE]
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT_DIR, paste0(PREFIX, "_REPORT.txt")))
 
 capture.output(sessionInfo(), file = file.path(OUT_DIR, paste0(PREFIX, "_sessionInfo.txt")))

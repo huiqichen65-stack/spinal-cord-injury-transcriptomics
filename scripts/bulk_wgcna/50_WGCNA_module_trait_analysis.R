@@ -785,7 +785,7 @@ kegg_sig_n <- if (nrow(key_kegg) > 0L && "p.adjust" %in% names(key_kegg)) {
   0L
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, files$report), useBytes = TRUE)
 
 sink(file.path(OUT_DIR, files$session))

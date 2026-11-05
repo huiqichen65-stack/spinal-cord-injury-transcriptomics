@@ -226,7 +226,7 @@ resume_complete_v01 <- function() {
   stopif(isTRUE(file.rename(partial, final)), paste("Cannot rename partial file to final RDS:", final))
   qc_table <- read_old("06_123_cluster_QC_contamination_v01.csv")
   compare <- read_old("11_123_clustering_stability_ARI_v01.csv")
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, "14_123_REPORT_v03.txt"), useBytes = TRUE)
   writeLines(capture.output(utils::sessionInfo()), file.path(OUT_DIR, "15_123_sessionInfo_v03.txt"),
     useBytes = TRUE)
@@ -574,7 +574,7 @@ main <- function() {
       tmpfile))
   }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, "14_123_REPORT_v03.txt"), useBytes = TRUE)
   writeLines(capture.output(utils::sessionInfo()), file.path(OUT_DIR, "15_123_sessionInfo_v03.txt"),
     useBytes = TRUE)

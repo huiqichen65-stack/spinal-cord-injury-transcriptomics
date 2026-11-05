@@ -574,7 +574,7 @@ extended_counts <- count_degs(tt_extended, "Extended")
 
 late_counts <- count_degs(tt_14_28, "28vs14")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT_DIR, num_name(31, "REPORT.txt")))
 
 capture.output(sessionInfo(), file = file.path(OUT_DIR, num_name(32, "sessionInfo.txt")))

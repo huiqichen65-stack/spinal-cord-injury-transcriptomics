@@ -415,7 +415,7 @@ main <- function() {
   total_input <- sum(stats$n_input_QC_barcodes)
   total_singlets <- sum(stats$n_predicted_singlets)
   total_doublets <- sum(stats$n_predicted_doublets)
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, "06_119_REPORT_v02.txt"), useBytes = TRUE)
   writeLines(capture.output(utils::sessionInfo()),
              file.path(OUT_DIR, "07_119_sessionInfo_v02.txt"), useBytes = TRUE)

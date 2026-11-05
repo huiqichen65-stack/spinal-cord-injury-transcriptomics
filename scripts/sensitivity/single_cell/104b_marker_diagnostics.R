@@ -391,7 +391,7 @@ tryCatch({
 })
 
 report_path <- file.path(OUTPUT_DIR, "16_104_REPORT_v04.txt")
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_path, useBytes = TRUE)
 session_path <- file.path(OUTPUT_DIR, "15_104_sessionInfo_v04.txt")
 writeLines(capture.output(utils::sessionInfo()), session_path, useBytes = TRUE)

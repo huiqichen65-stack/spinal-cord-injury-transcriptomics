@@ -567,7 +567,7 @@ tryCatch({
 status_df <- bind_list(statuses)
 for (j in seq_len(nrow(status_df))) {
 }
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUTPUT, "11_104_REPORT_v03.txt"), useBytes = TRUE)
 capture.output(sessionInfo(), file = file.path(OUTPUT, "12_104_sessionInfo_v03.txt"))
 

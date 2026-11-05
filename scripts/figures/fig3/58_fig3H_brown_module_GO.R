@@ -326,7 +326,7 @@ plot_qc <- data.frame(metric = c("GO_result_source", "gene_evidence_source", "en
 
 write_csv(plot_qc, paste0("04_", PREFIX, "_plot_QC.csv"))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, paste0("05_", PREFIX, "_REPORT.txt")), useBytes = TRUE)
 
 for (i in seq_len(min(5L, nrow(selected_terms)))) {

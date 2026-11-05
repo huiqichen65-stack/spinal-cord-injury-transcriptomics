@@ -347,7 +347,7 @@ for (tf in tfs) {
   plot_ridges(tf, go_results[[key]], rank_data[[key]], paste0("10_102_", tf, "_Figure6G_GO_GSEA_ridgeplot_v01"))
 }
 
-write_lines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+write_lines("Numerical results are provided in the accompanying output tables.", 
     "11_102_REPORT_v01.txt")
 outputs <- list.files(outdir, full.names = FALSE)
 write_table(data.frame(file = outputs, stringsAsFactors = FALSE), "00_102_OUTPUT_INDEX_v01.csv")

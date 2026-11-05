@@ -399,7 +399,7 @@ run <- function() {
     "Fig_127_original_UMI_depth_by_cluster_GSM_v01.png"),
     plot = p3, width = 12, height = 7, dpi = 160)
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "08_127_REPORT_v01.txt"), useBytes = TRUE)
   writeLines(capture.output(sessionInfo()),
              file.path(OUT, "09_127_sessionInfo_v01.txt"), useBytes = TRUE)

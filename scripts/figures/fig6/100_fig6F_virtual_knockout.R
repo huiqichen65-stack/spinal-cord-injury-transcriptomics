@@ -272,7 +272,7 @@ overall_status <- if (n_fail == 0L) {
   "FAIL"
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 print(overlap_summary, row.names = FALSE)

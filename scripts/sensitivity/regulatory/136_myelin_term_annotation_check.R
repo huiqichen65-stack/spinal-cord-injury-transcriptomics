@@ -369,6 +369,6 @@ out_csv(qc, "13_136_FINAL_QC_v01.csv")
 file_index <- list.files(table_dir, pattern = "\\.csv$", full.names = TRUE)
 idx <- data.frame(file = basename(file_index), bytes = file.info(file_index)$size, stringsAsFactors = FALSE)
 out_csv(idx, "00_136_OUTPUT_INDEX_v01.csv")
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(output_dir, "14_136_REPORT_v01.txt"), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), file.path(output_dir, "15_136_sessionInfo_v01.txt"), useBytes = TRUE)

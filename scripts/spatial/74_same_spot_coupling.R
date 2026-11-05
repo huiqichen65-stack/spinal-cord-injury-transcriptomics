@@ -548,7 +548,7 @@ rep_lines <- apply(rep_sections, 1, function(z) {
     paste0("  ", z[["timepoint"]], ": ", z[["section_uid_internal"]], " [", z[["sample_label"]], "]")
 })
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = REPORT_FILE, useBytes = TRUE)
 
 print(time_summary)

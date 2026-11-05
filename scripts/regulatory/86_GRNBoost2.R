@@ -241,7 +241,7 @@ overall <- if (n_fail > 0) {
   "PASS"
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 cat("WARN    = ", n_warn, "\n", sep = "")

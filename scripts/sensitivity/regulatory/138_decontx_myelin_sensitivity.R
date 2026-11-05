@@ -650,7 +650,7 @@ qc <- data.frame(check = c("Step20 focal state present", "GO:0043209 leading gen
   "No change in UMI is not proof of genuine cellular transcription", "Requires orthogonal evidence",
   "No archive dependency"), stringsAsFactors = FALSE)
 write_csv(qc, "13_138_FINAL_QC_v01.csv")
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(out, "14_138_REPORT_v01.txt"), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), file.path(out, "15_138_sessionInfo_v01.txt"), useBytes = TRUE)
 write_csv(data.frame(filename = basename(list.files(tabs, full.names = TRUE)), bytes = as.numeric(file.info(list.files(tabs,

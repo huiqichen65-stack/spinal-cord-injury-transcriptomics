@@ -327,7 +327,7 @@ run <- function() {
     fail_unless(file.exists(partial) && file.info(partial)$size > 1e+06, "Seurat RDS save incomplete")
     fail_unless(isTRUE(file.rename(partial, outfile)), "Could not finalize optional Seurat RDS")
   }
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, "09_125_REPORT_v01.txt"), useBytes = TRUE)
   writeLines(capture.output(sessionInfo()), file.path(OUT_DIR, "10_125_sessionInfo_v01.txt"), useBytes = TRUE)
   invisible(TRUE)

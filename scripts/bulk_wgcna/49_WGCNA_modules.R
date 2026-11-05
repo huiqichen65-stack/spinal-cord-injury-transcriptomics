@@ -431,7 +431,7 @@ module_summary_text <- paste0(module_size_tab$module_color, "=", module_size_tab
 core_text <- paste0(core_module$requested_gene, ":", ifelse(core_module$found_in_WGCNA_gene_set, paste0(core_module$module_color,
   " (kME=", fmt_num(core_module$kME_own_module, 3), ")"), "not_found"), collapse = "; ")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT_DIR, files$report), useBytes = TRUE)
 
 sink(file.path(OUT_DIR, files$session))

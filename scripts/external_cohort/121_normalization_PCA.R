@@ -447,7 +447,7 @@ main <- function() {
     assert(file.exists(sout) && file.info(sout)$size > 1000, "Output Seurat RDS was not saved successfully")
   }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, "09_121_REPORT_v02.txt"), useBytes = TRUE)
   writeLines(capture.output(utils::sessionInfo()), file.path(OUT_DIR, "10_121_sessionInfo_v02.txt"),
     useBytes = TRUE)

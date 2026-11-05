@@ -493,5 +493,5 @@ n_left_enriched <- sum(state_enrichment$enrichment_direction == "Significant enr
 n_left_depleted <- sum(state_enrichment$enrichment_direction == "Significant depletion")
 n_left_ns <- sum(state_enrichment$enrichment_direction == "Not significant")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, paste0("06_", PREFIX, "_REPORT.txt")), useBytes = TRUE)

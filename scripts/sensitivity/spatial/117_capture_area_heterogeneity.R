@@ -625,7 +625,7 @@ fig25 <- ggplot(qc_plot, aes(x = RNA_depth_proxy, y = Clec7a_mean_RCTD, color = 
   y = "Mean Clec7a RCTD weight", color = "Capture area") + theme_classic(base_size = 9) + theme(legend.position = "bottom")
 plot_save(fig25, "25_117_RNA_depth_vs_Clec7a_section_QC", 12, 5.5)
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, paste0("17_", STEP, "_REPORT_", VERSION, ".txt")), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), file.path(OUT, paste0("18_", STEP, "_sessionInfo_", VERSION,
   ".txt")))

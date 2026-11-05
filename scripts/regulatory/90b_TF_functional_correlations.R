@@ -542,7 +542,7 @@ overall_status <- if (n_fail > 0) {
 
 top_corr <- corr_summary_v05[order(corr_summary_v05$correlation_rank_v05), , drop = FALSE]
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 input_qc <- data.frame(item = c("Step89 RSS ranking", "Step21 frozen UP signature", "Step20 lipid manifest",

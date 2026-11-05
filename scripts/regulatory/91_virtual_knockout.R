@@ -788,7 +788,7 @@ overall_status <- if (n_fail > 0) {
 summary_order <- ko_summary[order(-ko_summary$n_FDR05_nonKO, -ko_summary$n_top50_in_frozen1320_signature,
   -ko_summary$max_nonKO_distance), , drop = FALSE]
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 input_qc <- data.frame(item = c("Source myeloid RDS", "Frozen 1320-gene signature", "Step90 v05 functional panel",

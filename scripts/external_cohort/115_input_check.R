@@ -362,7 +362,7 @@ status <- if (any(qc_summary$matrix_status != "PASS_TECHNICAL_QC")) {
   "TECHNICALLY_READY_FOR_NEXT_STAGE_ANNOTATION"
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(output_dir, "07_115_REPORT_v01.txt"), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), file.path(output_dir, "08_115_sessionInfo_v01.txt"), useBytes = TRUE)
 

@@ -314,7 +314,7 @@ params <- data.frame(parameter = c("R", "source_version", "postprocess_version",
   "paired common non-KO gene universe per TF", "NO", "NO", "NO", "NO"), stringsAsFactors = FALSE)
 writecsv(params, "11_143_v02_environment_parameters.csv")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "12_143_v02_REPORT.txt"), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), file.path(OUT, "13_143_v02_sessionInfo.txt"), useBytes = TRUE)
 

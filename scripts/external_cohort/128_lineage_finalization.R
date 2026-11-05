@@ -153,7 +153,7 @@ run <- function() {
   write_tab(per_gsm, "08_128_myeloid_per_GSM_feasibility_v02.csv")
 
   saveRDS(annotated, file = file.path(RDS_DIR, "128_GSE281205_curated_cell_metadata_v02.rds"), compress = "gzip")
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "09_128_status_and_method_notes_v02.txt"), useBytes = TRUE)
   writeLines(capture.output(sessionInfo()), file.path(OUT, "10_128_sessionInfo_v02.txt"), useBytes = TRUE)
   idx <- list.files(OUT, recursive = TRUE, full.names = TRUE)

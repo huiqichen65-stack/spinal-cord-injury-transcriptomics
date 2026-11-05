@@ -388,7 +388,7 @@ tryCatch({
   logline("Figure generation error: ", conditionMessage(e))
 }, finally = grDevices::dev.off())
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "11_140_REPORT_v01.txt"), useBytes = TRUE)
 utils::capture.output(sessionInfo(), file = file.path(OUT, "12_140_sessionInfo_v01.txt"))
 all_files <- list.files(OUT, pattern = "\\.(csv|gz|txt|pdf|log)$", recursive = TRUE, full.names = TRUE)

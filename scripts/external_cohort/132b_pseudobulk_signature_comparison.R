@@ -491,7 +491,7 @@ tryCatch({
   log_msg("WARNING plot failed: ", conditionMessage(e))
 })
 
-write_txt("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+write_txt("Numerical results are provided in the accompanying output tables.", 
     "11_132_REPORT_v02.txt")
 write_txt(capture.output(sessionInfo()), "12_132_sessionInfo_v02.txt")
 created <- list.files(OUT, recursive = TRUE, full.names = FALSE)

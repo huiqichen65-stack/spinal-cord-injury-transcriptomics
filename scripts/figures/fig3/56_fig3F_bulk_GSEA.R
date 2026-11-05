@@ -479,5 +479,5 @@ qc <- data.frame(metric = c("GSEA_CSV_source", "Step48_RDS_source", "frozen_GSEA
 
 write_csv(qc, paste0("04_", PREFIX, "_plot_QC.csv"))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, paste0("05_", PREFIX, "_REPORT.txt")), useBytes = TRUE)

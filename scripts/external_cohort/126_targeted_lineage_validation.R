@@ -365,7 +365,7 @@ run_step126 <- function() {
     logline("Harmony UMAP reduction name not found; omitted UMAP figure.")
   }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, "10_126_REPORT_v01.txt"), useBytes = TRUE)
   writeLines(capture.output(sessionInfo()), file.path(OUT_DIR, "11_126_sessionInfo_v01.txt"), useBytes = TRUE)
   write_csv(data.frame(path = c(IN_RDS, IN_MEM, IN_MARKER, IN_FM, IN_EVID, IN_DEC), source = c("Step123",

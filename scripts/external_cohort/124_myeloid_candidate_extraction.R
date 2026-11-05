@@ -453,7 +453,7 @@ run <- function() {
            "Could not finalize candidate RDS (partial retained)")
   }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "14_124_REPORT_v01.txt"), useBytes = TRUE)
   writeLines(capture.output(utils::sessionInfo()),
              file.path(OUT, "15_124_sessionInfo_v01.txt"), useBytes = TRUE)

@@ -333,7 +333,7 @@ qc_df <- do.call(rbind, qc_items)
 write.csv(qc_df, qc_file, row.names = FALSE)
 overall_status <- if (any(qc_df$status == "FAIL")) "FAIL" else if (any(qc_df$status == "WARN")) "PASS_WITH_WARNINGS" else "PASS"
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)
 
 files_written <- c(term_file, member_file, figure_pdf, figure_svg, figure_png, qc_file, report_file)

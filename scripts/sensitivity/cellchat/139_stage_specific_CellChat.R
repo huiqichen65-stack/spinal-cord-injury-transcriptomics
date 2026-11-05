@@ -783,7 +783,7 @@ write_tab(data.frame(issue = c("14dpi within-dataset CellChat", "28dpi within-da
   "L/R co-detection supports transcript presence, not receptor function", "Spot mixture, RCTD and RNA share data; no pooled-spot p-values",
   "Independent sample evidence only for the genes and groups actually observed", "Within-population APOE model output does not establish autocrine signaling")),
   "30_139_VALIDATION_STATUS")
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = file.path(OUT, "139_METHODS_AND_LIMITATIONS_v03.txt"), useBytes = TRUE)
 writeLines(capture.output(sessionInfo()), con = file.path(OUT, "139_sessionInfo_v03.txt"), useBytes = TRUE)
 qcnames <- c("INPUTS_ATLAS_MYELOID_SPATIAL_RCTD", "STEP77_COHORT_CHECK_IF_AVAILABLE", "REFINED_CELLCHAT_TWO_STAGE_RDS",

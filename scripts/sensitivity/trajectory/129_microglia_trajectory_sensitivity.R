@@ -659,7 +659,7 @@ tryCatch({
 grDevices::dev.off()
 logit("Wrote ", basename(pdf_path))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "15_129_methods_and_limitations_v01.txt"), useBytes = TRUE)
 capture.output(sessionInfo(), file = file.path(OUT, "16_129_sessionInfo_v01.txt"))
 all_out <- list.files(OUT, full.names = TRUE, recursive = FALSE)

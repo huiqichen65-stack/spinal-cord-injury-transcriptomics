@@ -611,7 +611,7 @@ tryCatch({
 
   sink_file <- file.path(OUT, "21_122_sessionInfo_v02.txt")
   capture.output(sessionInfo(), file = sink_file)
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT, "22_122_REPORT_v02.txt"), useBytes = TRUE)
 }, error = function(e) {
   step_log("STEP122 FAILED: ", conditionMessage(e))

@@ -401,7 +401,7 @@ report_file <- file.path(OUT_DIR, paste0("15_62_GSE195783_joint_embedding_batch_
 
 report_con <- file(report_file, open = "wt", encoding = "UTF-8")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = report_con)
 
 close(report_con)

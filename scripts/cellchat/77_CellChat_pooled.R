@@ -614,7 +614,7 @@ write_csv_utf8(qc, file.path(OUT_DIR, "15_77_Global_CellChat_FINAL_QC_v05.csv"))
 
 REPORT_FILE <- file.path(OUT_DIR, "16_77_Global_CellChat_REPORT_v05.txt")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     con = REPORT_FILE, useBytes = TRUE)
 
 capture.output(sessionInfo(), file = file.path(OUT_DIR, "17_77_sessionInfo_v05.txt"))

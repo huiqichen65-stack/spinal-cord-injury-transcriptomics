@@ -289,7 +289,7 @@ write_csv(hit_export, paste0("03_", PREFIX, "_signature_hit_positions.csv"))
 
 write_csv(leading_df, paste0("04_", PREFIX, "_frozen_leading_edge_genes.csv"))
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, paste0("05_", PREFIX, "_REPORT.txt")), useBytes = TRUE)
 
 msg("NES = ", signif(frozen_NES, 6), "; FDR = ", sci_text(frozen_FDR, 3))

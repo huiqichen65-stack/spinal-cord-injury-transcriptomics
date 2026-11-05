@@ -253,5 +253,5 @@ if (any(qc$status == "FAIL")) {
   stop("GraphML QC contains FAIL item(s).")
 }
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     report_file)

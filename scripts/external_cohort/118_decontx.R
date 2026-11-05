@@ -366,7 +366,7 @@ main <- function() {
       log_msg("WARNING: overall figure failed: ", conditionMessage(e))
     })
   }
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, "06_118_REPORT_v01.txt"), useBytes = TRUE)
   writeLines(capture.output(utils::sessionInfo()),
              file.path(OUT_DIR, "07_118_sessionInfo_v01.txt"), useBytes = TRUE)

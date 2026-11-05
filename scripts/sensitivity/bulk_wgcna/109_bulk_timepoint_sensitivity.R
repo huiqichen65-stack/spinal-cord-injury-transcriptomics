@@ -477,7 +477,7 @@ output_files <- data.frame(No = c("01", "02", "03", "04", "05", "06", "07", "08"
 utils::write.csv(output_files, file.path(TABLES_DIR, paste0("00_", PREFIX, "_OUTPUT_INDEX.csv")), row.names = FALSE,
   fileEncoding = "UTF-8")
 
-writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 
+writeLines("Numerical results are provided in the accompanying output tables.", 
     file.path(OUT_DIR, paste0(PREFIX, "_REPORT.txt")), useBytes = TRUE)
 
 writeLines(capture.output(utils::sessionInfo()), file.path(OUT_DIR, paste0(PREFIX, "_sessionInfo.txt")),
