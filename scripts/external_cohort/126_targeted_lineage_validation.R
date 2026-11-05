@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, scipen = 999, warn = 1)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 SRC123 <- file.path(ROOT, "results", "123_GSE281205_major_lineage_clustering")
 SRC125 <- file.path(ROOT, "results", "125_GSE281205_major_lineage_annotation")
 SRC121 <- file.path(ROOT, "results", "121_GSE281205_normalize_PCA_batch_audit")

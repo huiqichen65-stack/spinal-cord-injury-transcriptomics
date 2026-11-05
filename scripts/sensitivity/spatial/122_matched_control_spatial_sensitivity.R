@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 VERSION <- "v02"
 STEP <- "122_matched_controls_spatial_dependence"
 OUT <- file.path(ROOT, "results", STEP)

@@ -1,9 +1,11 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
-python_exe <- "C:/Users/Jiang Wu/anaconda3/envs/pyscenic_env/python.exe"
+python_exe <- PYSCENIC_PYTHON
 
 num_workers <- 6L
 aucell_seed <- 8801L
@@ -17,17 +19,17 @@ delete_temp_mtx_after_loom <- TRUE
 
 overwrite_completed_auc <- FALSE
 
-source_rds <- paste0("D:/zz/results/20_AUCell_lipid_metabolism_scoring/", "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
+source_rds <- paste0(project_path("results/20_AUCell_lipid_metabolism_scoring/"), "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
 
-step84_qc_file <- paste0("D:/zz/results/84_pySCENIC_input_preparation/", "13_84_pySCENIC_FINAL_QC_v01.csv")
+step84_qc_file <- paste0(project_path("results/84_pySCENIC_input_preparation/"), "13_84_pySCENIC_FINAL_QC_v01.csv")
 
-step85_dir <- "D:/zz/results/85_pySCENIC_GRNBoost2_input_preparation"
+step85_dir <- project_path("results/85_pySCENIC_GRNBoost2_input_preparation")
 
 discovery_gene_file <- file.path(step85_dir, "07_85_pySCENIC_GRN_discovery_genes_v01.tsv.gz")
 
 step85_qc_file <- file.path(step85_dir, "13_85_pySCENIC_FINAL_QC_v01.csv")
 
-step87_dir <- "D:/zz/results/87_pySCENIC_cisTarget_pruning"
+step87_dir <- project_path("results/87_pySCENIC_cisTarget_pruning")
 
 regulon_file <- file.path(step87_dir, "06_87_pySCENIC_regulons_v01.csv")
 
@@ -35,7 +37,7 @@ step87_qc_file <- file.path(step87_dir, "09_87_pySCENIC_FINAL_QC_v01.csv")
 
 step87_report_file <- file.path(step87_dir, "10_87_pySCENIC_REPORT_v01.txt")
 
-outdir <- "D:/zz/results/88_pySCENIC_regulon_AUCell_full_atlas"
+outdir <- project_path("results/88_pySCENIC_regulon_AUCell_full_atlas")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

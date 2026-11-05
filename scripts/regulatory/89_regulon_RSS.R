@@ -1,9 +1,11 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
-python_exe <- "C:/Users/Jiang Wu/anaconda3/envs/pyscenic_env/python.exe"
+python_exe <- PYSCENIC_PYTHON
 
 target_state <- "Clec7a+ lipid-handling Microglia"
 
@@ -17,7 +19,7 @@ png_dpi <- 600
 
 overwrite_completed_output <- FALSE
 
-step88_dir <- "D:/zz/results/88_pySCENIC_regulon_AUCell_full_atlas"
+step88_dir <- project_path("results/88_pySCENIC_regulon_AUCell_full_atlas")
 
 auc_file <- file.path(step88_dir, "11_88_pySCENIC_AUCell_full_atlas_v02.csv.gz")
 
@@ -31,7 +33,7 @@ step88_qc_file <- file.path(step88_dir, "15_88_pySCENIC_FINAL_QC_v02.csv")
 
 step88_report_file <- file.path(step88_dir, "16_88_pySCENIC_REPORT_v02.txt")
 
-outdir <- "D:/zz/results/89_pySCENIC_RSS_target_regulon_ranking"
+outdir <- project_path("results/89_pySCENIC_RSS_target_regulon_ranking")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

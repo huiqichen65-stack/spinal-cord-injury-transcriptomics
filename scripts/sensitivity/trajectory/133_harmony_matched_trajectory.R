@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
 set.seed(1234L)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 V <- "v04"
 OUT <- file.path(ROOT, "results", "133_Harmony_matched_trajectory")
 IN18 <- file.path(ROOT, "results", "18_myeloid_annotation_cleanup", "18_myeloid_annotation_cleanup_3scRNA_v01.rds")
@@ -57,7 +59,7 @@ missing <- needed[!vapply(needed, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing)) stop("Missing packages: ", paste(missing, collapse = ", "))
 for (p in c(IN18, IN_COHORT, IN_CYCLE)) if (!file.exists(p)) stop("Required DIRECT project file missing: ",
   p)
-if (!dir.exists(file.path(ROOT, "script"))) stop("D:/zz/script/ missing; check ROOT")
+if (!dir.exists(file.path(ROOT, "script"))) stop("the project script directory/ missing; check ROOT")
 dir.create(OUT, recursive = TRUE, showWarnings = FALSE)
 LOG <- file.path(OUT, "133_Harmony_matched_trajectory_v04.log")
 if (file.exists(LOG)) unlink(LOG)
@@ -639,7 +641,7 @@ if (file.exists(IN_OLDPT)) {
 write_out(old_comp, "10_133_original129_comparison")
 
 limitations <- c("Step133 v04 | METHODS AND LIMITATIONS", paste0("Date: ", format(Sys.time(), "%Y-%m-%d %H:%M:%S")),
-  "All inputs are direct D:/zz project files, not archives; no old numbered R script is sourced.",
+  "All inputs are direct project files, not archives; no old numbered R script is sourced.",
   "Software: fixed original Step15 harmony 1.2.4, uwot 0.2.4 and Seurat 5.4.0; strict preflight before analysis.",
   "RunHarmony: source_dataset on the first 30 PC, max.iter.harmony=20, as original Step15.", "RunUMAP: Seurat 5.4.0 default uwot backend and original Step15 default neighbors/min.dist, seed=1234.",
   "v04 re-runs full analysis; Step18 and Step129 inclusion/cycle tables are inputs; no prior Step133 result reuse.",

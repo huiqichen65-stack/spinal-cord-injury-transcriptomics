@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, scipen = 999, warn = 1)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEM <- "GSE281205"
 D123 <- file.path(ROOT, "results", paste0("123_", STEM, "_major_lineage_clustering"))
 D128 <- file.path(ROOT, "results", paste0("128_", STEM, "_reviewed_lineage_finalization"))

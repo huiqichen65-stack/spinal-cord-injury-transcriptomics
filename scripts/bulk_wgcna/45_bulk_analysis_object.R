@@ -1,9 +1,11 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP44_DIR <- file.path(ROOT, "results", "44_Bulk_17702045_input_QC")
 

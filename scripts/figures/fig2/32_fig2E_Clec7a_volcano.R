@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 SEED <- 1234
@@ -21,7 +23,7 @@ suppressPackageStartupMessages({
   library(ggrepel)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 RES_DIR <- file.path(ROOT, "results")
 
 STEP21_DIR <- file.path(RES_DIR, "21_Clec7a_DEG_volcano_myeloid")

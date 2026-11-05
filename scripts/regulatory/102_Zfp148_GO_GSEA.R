@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, width = 160)
 
-project_root <- "D:/zz"
+project_root <- PROJECT_ROOT
 primary_tf <- "Zfp148"
 compare_with_mef2a <- TRUE
 fdr_cutoff <- 0.05

@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, scipen = 50, width = 170)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 PREFIX <- "143_de_novo_gene_selection_network_sensitivity"
 V01_OUT <- file.path(ROOT, "results", PREFIX)
 OUT <- file.path(ROOT, "results", paste0(PREFIX, "_v02"))

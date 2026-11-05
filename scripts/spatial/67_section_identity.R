@@ -1,13 +1,15 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
 set.seed(1234)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 INPUT_FILE <- file.path(ROOT, "results", "60_GSE195783_Visium_import_coordinate_reconstruction", "03_60_GSE195783_final_spot_metadata_v05.csv.gz")
 

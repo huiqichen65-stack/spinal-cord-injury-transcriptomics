@@ -1,10 +1,12 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STATE_MARKER_FILE <- file.path(ROOT, "results", "18_myeloid_annotation_cleanup", "18_myeloid_state_markers_v01.csv")
 

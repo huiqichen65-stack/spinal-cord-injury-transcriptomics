@@ -1,4 +1,6 @@
-root_dir <- "D:/zz"
+source("config.R", local = TRUE)
+
+root_dir <- PROJECT_ROOT
 input_file <- file.path(root_dir, "results", "18_myeloid_annotation_cleanup", "18_myeloid_annotation_cleanup_3scRNA_v01.rds")
 output_dir <- file.path(root_dir, "results", "105_microglia_only_DEG")
 

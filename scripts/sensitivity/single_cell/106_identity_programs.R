@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 INPUT <- file.path(ROOT, "results", "18_myeloid_annotation_cleanup", "18_myeloid_annotation_cleanup_3scRNA_v01.rds")
 OUT <- file.path(ROOT, "results", "106_identity_programs")
 STAGES <- c("Control", "4 h", "1 dpi", "3 dpi", "7 dpi", "14 dpi", "28 dpi", "38 dpi")

@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 VERSION <- "v01"
 SAMPLE_IDS <- paste0("GSM", 8614662:8614667)
 EXPECTED_CELLS <- 42361L

@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 IN_DIR <- file.path(ROOT, "results", "119_GSE281205_scDblFinder")
 IN_RDS <- file.path(IN_DIR, "RDS")
 OUT_DIR <- file.path(ROOT, "results", "121_GSE281205_normalize_PCA_batch_audit")

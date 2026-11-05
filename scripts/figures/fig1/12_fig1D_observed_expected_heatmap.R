@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 suppressPackageStartupMessages({
@@ -9,8 +11,8 @@ suppressPackageStartupMessages({
 FONT_FAMILY <- "sans"
 USE_SHOWTEXT <- FALSE
 
-arial_regular <- "C:/Windows/Fonts/arial.ttf"
-arial_bold    <- "C:/Windows/Fonts/arialbd.ttf"
+arial_regular <- FONT_REGULAR
+arial_bold    <- FONT_BOLD
 
 if (requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts", quietly = TRUE) && file.exists(arial_regular)) {
     if (file.exists(arial_bold)) {

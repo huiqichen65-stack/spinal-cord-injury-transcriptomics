@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
@@ -22,13 +24,13 @@ fig_width_in <- 11.0
 fig_height_in <- 5.4
 png_dpi <- 600
 
-myeloid_rds <- paste0("D:/zz/results/20_AUCell_lipid_metabolism_scoring/", "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
+myeloid_rds <- paste0(project_path("results/20_AUCell_lipid_metabolism_scoring/"), "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
 
-rss_file <- paste0("D:/zz/results/89_pySCENIC_RSS_target_regulon_ranking/", "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
+rss_file <- paste0(project_path("results/89_pySCENIC_RSS_target_regulon_ranking/"), "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
 
-aucell_file <- paste0("D:/zz/results/88_pySCENIC_regulon_AUCell_full_atlas/", "11_88_pySCENIC_AUCell_full_atlas_v02.csv.gz")
+aucell_file <- paste0(project_path("results/88_pySCENIC_regulon_AUCell_full_atlas/"), "11_88_pySCENIC_AUCell_full_atlas_v02.csv.gz")
 
-outdir <- "D:/zz/results/96_Figure6B_top10_regulon_activity_UMAP"
+outdir <- project_path("results/96_Figure6B_top10_regulon_activity_UMAP")
 
 if (!dir.exists(outdir)) {
     dir.create(outdir, recursive = TRUE)

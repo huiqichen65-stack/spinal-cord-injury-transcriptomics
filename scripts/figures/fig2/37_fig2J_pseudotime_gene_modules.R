@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("ComplexHeatmap", "circlize", "ggplot2", "dplyr", "tidyr", "patchwork", "svglite", 
@@ -19,7 +21,7 @@ suppressPackageStartupMessages({
   library(grid)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP27_DIR <- file.path(ROOT, "results", "27_Monocle3_trajectory_gene_modules")
 

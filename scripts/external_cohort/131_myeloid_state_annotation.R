@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEM <- "GSE281205"
 D124 <- file.path(ROOT, "results", paste0("124_", STEM, "_lineage_review_myeloid_extraction"))
 D128 <- file.path(ROOT, "results", paste0("128_", STEM, "_reviewed_lineage_finalization"))

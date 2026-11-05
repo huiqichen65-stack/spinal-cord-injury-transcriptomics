@@ -1,10 +1,12 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
 
 set.seed(109)
 
 find_project_root <- function() {
     env_root <- Sys.getenv("SCI_PROJECT_ROOT", unset = "")
-    candidates <- unique(c(if (nzchar(env_root)) env_root else character(0), getwd(), "D:/zz", "C:/Users/Jiang Wu/Desktop/zz"))
+    candidates <- unique(c(if (nzchar(env_root)) env_root else character(0), PROJECT_ROOT, getwd()))
     is_project <- function(x) {
         if (!dir.exists(x)) 
             return(FALSE)
@@ -13,7 +15,7 @@ find_project_root <- function() {
     ok <- candidates[vapply(candidates, is_project, logical(1))]
     if (!length(ok)) {
         stop("Could not identify the zz project root.\n", "Expected the Step45 analysis object under results/.\n", 
-            "Open the zz RStudio project or set ", "Sys.setenv(SCI_PROJECT_ROOT='D:/zz').")
+            "Open the zz RStudio project or set ", "Sys.setenv(SCI_PROJECT_ROOT='/path/to/project').")
     }
     normalizePath(ok[1], winslash = "/", mustWork = TRUE)
 }

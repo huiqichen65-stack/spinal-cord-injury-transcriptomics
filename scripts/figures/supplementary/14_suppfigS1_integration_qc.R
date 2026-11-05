@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 set.seed(1234)
 
@@ -22,8 +24,8 @@ LEGEND_TEXT_SIZE <- 6.5
 FONT_FAMILY <- "sans"
 USE_SHOWTEXT <- FALSE
 
-arial_regular <- "C:/Windows/Fonts/arial.ttf"
-arial_bold <- "C:/Windows/Fonts/arialbd.ttf"
+arial_regular <- FONT_REGULAR
+arial_bold <- FONT_BOLD
 
 if (requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts", quietly = TRUE) && file.exists(arial_regular)) {
     if (file.exists(arial_bold)) {
@@ -37,7 +39,7 @@ if (requireNamespace("showtext", quietly = TRUE) && requireNamespace("sysfonts",
     USE_SHOWTEXT <- TRUE
 }
 
-project_dir <- normalizePath(if (dir.exists("D:/zz")) "D:/zz" else getwd(), winslash = "/", mustWork = TRUE)
+project_dir <- normalizePath(if (dir.exists(PROJECT_ROOT)) PROJECT_ROOT else getwd(), winslash = "/", mustWork = TRUE)
 
 final_file <- file.path(project_dir, "results", "09_Figure1A_major_celltype_UMAP", "09_Figure1A_major_celltype_UMAP_object_v04.rds")
 

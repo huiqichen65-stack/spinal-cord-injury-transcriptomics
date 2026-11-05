@@ -1,8 +1,10 @@
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 IN_FILE <- file.path(ROOT, "results", "09_Figure1A_major_celltype_UMAP", "09_Figure1A_major_celltype_UMAP_object_v04.rds")
 

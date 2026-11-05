@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
 SEED <- 1234L
 N_HVG <- 3000L
@@ -36,12 +38,12 @@ suppressPackageStartupMessages({
   library(ggplot2)
 })
 
-PROJECT_DIR <- if (dir.exists("D:/zz")) "D:/zz" else getwd()
+PROJECT_DIR <- if (dir.exists(PROJECT_ROOT)) PROJECT_ROOT else getwd()
 PROJECT_DIR <- normalizePath(PROJECT_DIR, winslash = "/", mustWork = TRUE)
 INPUT <- file.path(PROJECT_DIR, "results", "18_myeloid_annotation_cleanup", "18_myeloid_annotation_cleanup_3scRNA_v01.rds")
 OUTPUT <- file.path(PROJECT_DIR, "results", "104_Harmony_source_sensitivity_v03")
 if (!file.exists(INPUT)) {
-  stop("Cannot find input RDS: ", INPUT, "\nSet PROJECT_DIR above to D:/zz or the project root.")
+  stop("Cannot find input RDS: ", INPUT, "\nSet PROJECT_DIR above to the project root or the project root.")
 }
 dir.create(OUTPUT, recursive = TRUE, showWarnings = FALSE)
 LOG_FILE <- file.path(OUTPUT, "104_Harmony_source_sensitivity_v03.log")

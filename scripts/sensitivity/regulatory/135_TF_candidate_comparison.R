@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, width = 160, scipen = 50)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 VERSION <- "v02"
 STEP <- "135"
 OUT_FOLDER <- "135_TF_candidate_comparison_resampling_v02"
@@ -133,7 +135,7 @@ audit <- data.frame(input = names(P), original_path = unlist(P, use.names = FALS
   use.names = FALSE)), size_bytes = unname(file.info(unlist(P, use.names = FALSE))$size))
 write_tab(audit, "00_135_INPUT_AUDIT_v02.csv")
 if (any(!audit$exists[match(primary, audit$input)])) {
-  stopf("Required original D:/zz inputs missing: ", paste(primary[!audit$exists[match(primary, audit$input)]],
+  stopf("Required original project inputs missing: ", paste(primary[!audit$exists[match(primary, audit$input)]],
     collapse = ", "))
 }
 

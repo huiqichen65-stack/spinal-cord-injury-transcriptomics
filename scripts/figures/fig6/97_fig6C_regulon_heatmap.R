@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
@@ -32,11 +34,11 @@ png_dpi <- 600
 
 draw_padding <- grid::unit(c(4, 8, 36, 62), "mm")
 
-rss_file <- paste0("D:/zz/results/89_pySCENIC_RSS_target_regulon_ranking/", "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
+rss_file <- paste0(project_path("results/89_pySCENIC_RSS_target_regulon_ranking/"), "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
 
-state_mean_auc_file <- paste0("D:/zz/results/88_pySCENIC_regulon_AUCell_full_atlas/", "14_88_pySCENIC_regulon_state_mean_AUC_v02.csv")
+state_mean_auc_file <- paste0(project_path("results/88_pySCENIC_regulon_AUCell_full_atlas/"), "14_88_pySCENIC_regulon_state_mean_AUC_v02.csv")
 
-outdir <- "D:/zz/results/97_Figure6C_top10_regulon_state_heatmap"
+outdir <- project_path("results/97_Figure6C_top10_regulon_state_heatmap")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

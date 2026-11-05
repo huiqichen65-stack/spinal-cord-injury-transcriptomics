@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, width = 160, scipen = 30)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 OUT <- file.path(ROOT, "results", "141_Figure6E_TF_gene_correlation_robustness_v03")
 VERSION <- "v03"
 ORIGINAL_RHO_TOL <- 1e-6
@@ -628,7 +630,7 @@ qc <- data.frame(check = c("required_input_files", "frozen_Figure6E_10_TF_20_gen
     "sample_or_unit_covariates_used", "source_stage_treatment_covariates_used"), status = c(if (all(audit$exists)) "PASS" else "FAIL", 
     if (length(tfs) == 10L && length(genes) == 20L) "PASS" else "FAIL", if (all(primary$reproduction_pass)) "PASS" else "FAIL", 
     if (length(target_idx) == 17709L) "PASS" else "FAIL", if (all(primary$n_covariates_technical == 2L)) "PASS" else "REVIEW", 
-    if (orphan_n == 0L) "PASS" else "FAIL", "NO", "NO"), details = c("All original D:/zz files available; no ZIP used", 
+    if (orphan_n == 0L) "PASS" else "FAIL", "NO", "NO"), details = c("All original project files available; no ZIP used", 
     "Step90 v05 identifiers used", paste0("max_abs_rho_delta=", format(max(abs(primary$delta_vs_step90)), 
         digits = 8)), "Target atlas state 17713 before zero-library filtering", "Ranked log1p total RNA UMI and ranked log1p detected genes", 
     paste0("finite adjusted with undefined raw n=", orphan_n), "v03 intentionally performs no sample/unit fixed-effect adjustment", 

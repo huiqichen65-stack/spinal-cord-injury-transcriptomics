@@ -1,10 +1,12 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 GO_FILE <- file.path(ROOT, "results", "50_Bulk_WGCNA_module_trait_integration", "11_50_Bulk_WGCNA_module_trait_integration_v01_key_module_ORA_GO_BP.csv")
 

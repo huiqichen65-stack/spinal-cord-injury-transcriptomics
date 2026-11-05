@@ -1,10 +1,12 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP47_RDS <- file.path(ROOT, "results", "47_Bulk_scRNA_Clec7a_signature_GSEA", "30_47_Bulk_scRNA_Clec7a_signature_GSEA_v02_analysis_object.rds")
 

@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 VERSION <- "v02"
 RUN_ID <- "120_RCTD_lipid_feature_overlap"
 RECONSTRUCT_RCTD_PREPROCESSING <- TRUE

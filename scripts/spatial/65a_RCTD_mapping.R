@@ -1,13 +1,15 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 options(timeout = 1200)
 
 set.seed(1234)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 SPATIAL_FILE <- file.path(ROOT, "results", "64_GSE195783_spatial_cluster_marker_region_annotation", "12_64_GSE195783_spatial_region_annotated_v03.rds")
 

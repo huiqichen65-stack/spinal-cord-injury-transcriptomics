@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
@@ -17,9 +19,9 @@ fig_width_in <- 5
 fig_height_in <- 4
 png_dpi <- 600
 
-rss_file <- paste0("D:/zz/results/89_pySCENIC_RSS_target_regulon_ranking/", "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
+rss_file <- paste0(project_path("results/89_pySCENIC_RSS_target_regulon_ranking/"), "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
 
-outdir <- "D:/zz/results/95_Figure6A_RSS_specificity_ranking"
+outdir <- project_path("results/95_Figure6A_RSS_specificity_ranking")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

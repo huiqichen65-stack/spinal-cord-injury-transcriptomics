@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 OUT <- file.path(ROOT, "results", "124_GSE281205_lineage_review_myeloid_extraction")
 SRC123 <- file.path(ROOT, "results", "123_GSE281205_major_lineage_clustering")
 SRC121 <- file.path(ROOT, "results", "121_GSE281205_normalize_PCA_batch_audit")

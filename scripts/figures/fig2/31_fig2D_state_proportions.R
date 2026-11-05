@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("Seurat", "ggplot2", "dplyr", "tidyr", "scales", "svglite")
@@ -14,7 +16,7 @@ suppressPackageStartupMessages({
   library(scales)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 RES_DIR <- file.path(ROOT, "results")
 STEP_DIR <- file.path(RES_DIR, "31_Figure2D_myeloid_state_temporal_proportions")
 dir.create(STEP_DIR, recursive = TRUE, showWarnings = FALSE)

@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, scipen = 50, width = 170)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEP <- "143"
 VER <- "v01"
 PREFIX <- "143_de_novo_gene_selection_network_sensitivity"
@@ -123,7 +125,7 @@ input_files <- c(unlist(P, use.names = TRUE), setNames(file.path(B00_CP, paste0(
 input_audit <- data.frame(name = names(input_files), path = unname(input_files), exists = file.exists(input_files),
   size_bytes = as.numeric(file.info(input_files)$size), stringsAsFactors = FALSE)
 writecsv(input_audit, "00_143_INPUT_AUDIT_v01.csv")
-if (any(!input_audit$exists)) stopf("Missing inputs in D:/zz: ", paste(input_audit$name[!input_audit$exists],
+if (any(!input_audit$exists)) stopf("Missing inputs in the project root: ", paste(input_audit$name[!input_audit$exists],
   collapse = ", "))
 if (!RUN_NETWORK) stopf("RUN_NETWORK=FALSE; this script's objective requires building an alternative WT network.")
 for (pkg in c("Matrix", "SeuratObject", "scTenifoldNet", "scTenifoldKnk")) if (!requireNamespace(pkg,

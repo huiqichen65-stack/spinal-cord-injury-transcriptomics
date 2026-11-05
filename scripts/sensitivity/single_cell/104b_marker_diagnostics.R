@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
 set.seed(1234)
-PROJECT_DIR <- "D:/zz"
+PROJECT_DIR <- PROJECT_ROOT
 VERSION <- "v04"
 INPUT_RDS <- file.path(PROJECT_DIR, "results", "18_myeloid_annotation_cleanup", "18_myeloid_annotation_cleanup_3scRNA_v01.rds")
 PREV_DIR <- file.path(PROJECT_DIR, "results", "104_Harmony_source_sensitivity_v03")

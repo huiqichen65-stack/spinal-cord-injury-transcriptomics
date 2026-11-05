@@ -1,6 +1,8 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 options(timeout = 1200)
@@ -8,7 +10,7 @@ options(future.globals.maxSize = 8 * 1024^3)
 
 set.seed(1234)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP60_DIR <- file.path(ROOT, "results", "60_GSE195783_Visium_import_coordinate_reconstruction")
 

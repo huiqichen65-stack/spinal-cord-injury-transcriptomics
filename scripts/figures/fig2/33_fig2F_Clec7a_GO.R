@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("ggplot2", "dplyr", "svglite")
@@ -13,7 +15,7 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 RES_DIR <- file.path(ROOT, "results")
 
 STEP22_DIR <- file.path(RES_DIR, "22_Clec7a_GO_KEGG_enrichment")

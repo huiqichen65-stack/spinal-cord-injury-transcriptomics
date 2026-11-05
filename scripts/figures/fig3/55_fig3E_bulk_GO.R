@@ -1,10 +1,12 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 UP_FILE <- file.path(ROOT, "results", "48_Bulk_functional_enrichment", "02_48_Bulk_functional_enrichment_v04_ORA_UP_GO_BP.csv")
 

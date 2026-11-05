@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
@@ -23,7 +25,7 @@ row_fontsize <- 10.5
 col_fontsize <- 10.0
 legend_fontsize <- 10.0
 
-step90_dir <- "D:/zz/results/90_pySCENIC_top10_TF_network_signature_correlation"
+step90_dir <- project_path("results/90_pySCENIC_top10_TF_network_signature_correlation")
 
 top10_file <- file.path(step90_dir, "02_90_top10_RSS_TFs_v05.csv")
 
@@ -31,7 +33,7 @@ key_gene_file <- file.path(step90_dir, "07_90_Figure6E_key_functional_gene_panel
 
 corr_file <- file.path(step90_dir, "08_90_Figure6E_TF_functional_gene_correlation_target_cells_v05.csv")
 
-outdir <- "D:/zz/results/99_Figure6E_reference_style_correlation_heatmap"
+outdir <- project_path("results/99_Figure6E_reference_style_correlation_heatmap")
 
 if (!dir.exists(outdir)) {
     dir.create(outdir, recursive = TRUE)

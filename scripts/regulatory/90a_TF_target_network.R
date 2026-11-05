@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
@@ -24,7 +26,7 @@ heatmap_height_in <- 6.5
 
 overwrite_completed_output <- FALSE
 
-step89_dir <- "D:/zz/results/89_pySCENIC_RSS_target_regulon_ranking"
+step89_dir <- project_path("results/89_pySCENIC_RSS_target_regulon_ranking")
 
 rss_ranking_file <- file.path(step89_dir, "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
 
@@ -32,29 +34,29 @@ step89_qc_file <- file.path(step89_dir, "10_89_pySCENIC_FINAL_QC_v01.csv")
 
 step89_report_file <- file.path(step89_dir, "11_89_pySCENIC_REPORT_v01.txt")
 
-regulon_file <- paste0("D:/zz/results/87_pySCENIC_cisTarget_pruning/", "06_87_pySCENIC_regulons_v01.csv")
+regulon_file <- paste0(project_path("results/87_pySCENIC_cisTarget_pruning/"), "06_87_pySCENIC_regulons_v01.csv")
 
-step87_qc_file <- paste0("D:/zz/results/87_pySCENIC_cisTarget_pruning/", "09_87_pySCENIC_FINAL_QC_v01.csv")
+step87_qc_file <- paste0(project_path("results/87_pySCENIC_cisTarget_pruning/"), "09_87_pySCENIC_FINAL_QC_v01.csv")
 
-adjacency_file <- paste0("D:/zz/results/86_pySCENIC_GRNBoost2/", "09_86_pySCENIC_GRNBoost2_adjacencies_v03.tsv.gz")
+adjacency_file <- paste0(project_path("results/86_pySCENIC_GRNBoost2/"), "09_86_pySCENIC_GRNBoost2_adjacencies_v03.tsv.gz")
 
-step21_dir <- "D:/zz/results/21_Clec7a_DEG_volcano_myeloid"
+step21_dir <- project_path("results/21_Clec7a_DEG_volcano_myeloid")
 
 deg_up_file <- file.path(step21_dir, "21_Clec7a_vs_all_myeloid_DEG_up_v01.csv")
 
 deg_all_file <- file.path(step21_dir, "21_Clec7a_vs_all_myeloid_DEG_all_v01.csv")
 
-signature_audit_file <- paste0("D:/zz/results/47_Bulk_scRNA_Clec7a_signature_GSEA/", "01_47_Bulk_scRNA_Clec7a_signature_GSEA_v02_signature_audit.csv")
+signature_audit_file <- paste0(project_path("results/47_Bulk_scRNA_Clec7a_signature_GSEA/"), "01_47_Bulk_scRNA_Clec7a_signature_GSEA_v02_signature_audit.csv")
 
-figure2_marker_audit_file <- paste0("D:/zz/results/29_Figure2B_myeloid_marker_dotplot/", "29_Figure2B_myeloid_marker_dotplot_v06_selected_marker_audit.csv")
+figure2_marker_audit_file <- paste0(project_path("results/29_Figure2B_myeloid_marker_dotplot/"), "29_Figure2B_myeloid_marker_dotplot_v06_selected_marker_audit.csv")
 
-figure2_volcano_label_file <- paste0("D:/zz/results/32_Figure2E_Clec7a_DEG_volcano/", "32_Figure2E_Clec7a_DEG_volcano_v08_labeled_genes.csv")
+figure2_volcano_label_file <- paste0(project_path("results/32_Figure2E_Clec7a_DEG_volcano/"), "32_Figure2E_Clec7a_DEG_volcano_v08_labeled_genes.csv")
 
-source_rds <- paste0("D:/zz/results/20_AUCell_lipid_metabolism_scoring/", "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
+source_rds <- paste0(project_path("results/20_AUCell_lipid_metabolism_scoring/"), "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
 
-python_exe <- "C:/Users/Jiang Wu/anaconda3/envs/pyscenic_env/python.exe"
+python_exe <- PYSCENIC_PYTHON
 
-outdir <- "D:/zz/results/90_pySCENIC_top10_TF_network_signature_correlation"
+outdir <- project_path("results/90_pySCENIC_top10_TF_network_signature_correlation")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

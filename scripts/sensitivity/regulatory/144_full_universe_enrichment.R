@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, scipen = 50, width = 170)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 TFS <- c("Mef2a", "Nr3c1", "Pura", "Ikzf1", "Bach1", "Fli1", "Zfp148", "Ep300", "Bclaf1", "Chd1")
 
 B00_CP <- file.path(ROOT, "results", "135_TF_candidate_comparison_resampling_v02", "network_checkpoints_v02",
@@ -382,7 +384,7 @@ qc <- data.frame(item = c("all_required_input_files_present", "fgsea_package_ava
     "-", max(universe_df$full_nonKO_ranked_genes)), paste("Coverage rows:", nrow(coverage_df)), paste("Jobs:",
     n_jobs_done, "/", total_jobs), paste("FGSEA result rows:", nrow(fg_all)), paste("Paired TF-pathway rows:",
     nrow(paired)), "Existing saved networks only", "Existing saved KO CSV.GZ outputs only", "No expression matrix read",
-  "No RDS read", "All inputs are original D:/zz project files"), stringsAsFactors = FALSE)
+  "No RDS read", "All inputs are original project files"), stringsAsFactors = FALSE)
 write_out(qc, "10_144_FINAL_QC_v01.csv")
 
 writeLines("Interpretation notes: ANALYSIS_NOTES.md. Numerical results: accompanying output tables.", 

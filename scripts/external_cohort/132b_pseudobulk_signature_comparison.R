@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, scipen = 999, warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 OUT <- file.path(ROOT, "results", "132_GSE281205_original_UMI_pseudobulk_signature_validation")
 RDS_DIR <- file.path(OUT, "RDS")
 FIG_DIR <- file.path(OUT, "figures")

@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 5)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEP <- 117L
 VERSION <- "v02"
 JOB <- "capture_area_heterogeneity"

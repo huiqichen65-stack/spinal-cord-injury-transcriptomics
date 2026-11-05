@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 RASTER_DPI <- 600
 
@@ -15,7 +17,7 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP25_DIR <- file.path(ROOT, "results", "25_Monocle3_all_myeloid_trajectory")
 

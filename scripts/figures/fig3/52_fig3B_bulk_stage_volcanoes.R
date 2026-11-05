@@ -1,12 +1,14 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
 set.seed(20260930)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP46_RDS <- file.path(ROOT, "results", "46_Bulk_limma_temporal_DEG_analysis", "30_46_Bulk_limma_temporal_DEG_analysis_v06_analysis_object.rds")
 

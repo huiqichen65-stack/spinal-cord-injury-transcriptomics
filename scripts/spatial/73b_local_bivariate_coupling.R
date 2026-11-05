@@ -1,13 +1,15 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
 set.seed(7304)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP73_DIR <- file.path(ROOT, "results", "73_GSE195783_Clec7a_lipid_spatial_coupling")
 

@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, scipen = 999, warn = 1)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEP <- "142_GSE281205_lipid_composition_specimen_robustness"
 OUT <- file.path(ROOT, "results", STEP)
 FIG <- file.path(OUT, "figures")

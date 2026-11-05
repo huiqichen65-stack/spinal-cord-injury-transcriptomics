@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("ggplot2", "dplyr", "svglite")
@@ -13,7 +15,7 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 IN_DIR <- file.path(ROOT, "results", "19_myeloid_state_robustness_temporal_dynamics")
 

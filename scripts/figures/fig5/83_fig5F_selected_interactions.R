@@ -1,4 +1,6 @@
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 suppressPackageStartupMessages({
@@ -7,7 +9,7 @@ suppressPackageStartupMessages({
   library(readr)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP77_DIR <- file.path(ROOT, "results", "77_Global_CellChat_Clec7a_centered")
 

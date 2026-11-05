@@ -1,11 +1,13 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 INPUT_FILE <- file.path(ROOT, "results", "73_GSE195783_Clec7a_lipid_spatial_coupling", "02_73_Clec7a_lipid_spot_scores_section_aware_v03.csv.gz")
 

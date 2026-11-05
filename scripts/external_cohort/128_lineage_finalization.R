@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEM <- "GSE281205"
 N_EXPECTED <- 42361L
 CLUSTERS <- as.character(0:23)

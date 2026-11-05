@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
 
-project_root <- "D:/zz"
+project_root <- PROJECT_ROOT
 input_dir <- file.path(project_root, "data", "GSE281205")
 output_dir <- file.path(project_root, "results", "115_GSE281205_input_QC")
 

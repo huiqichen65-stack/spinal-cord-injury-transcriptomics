@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 SEED <- 1234L
 DBR_VALUES <- c(0.07, 0.05, 0.1)
 EXPECTED_INPUT_N <- 19956L

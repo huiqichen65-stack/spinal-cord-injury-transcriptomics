@@ -1,7 +1,9 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
 set.seed(1234L)
 
-PROJECT_DIR <- "D:/zz"
+PROJECT_DIR <- PROJECT_ROOT
 INPUT <- file.path(PROJECT_DIR, "results", "18_myeloid_annotation_cleanup", "18_myeloid_annotation_cleanup_3scRNA_v01.rds")
 OUTPUT <- file.path(PROJECT_DIR, "results", "104_state_stability_v08")
 SOURCES <- c("17702045", "GSE162610", "GSE196928")

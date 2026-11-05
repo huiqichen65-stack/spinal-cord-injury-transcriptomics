@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
@@ -16,15 +18,15 @@ suppressPackageStartupMessages({
   library(Matrix)
 })
 
-input_rds <- file.path("D:/zz/results/20_AUCell_lipid_metabolism_scoring", "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
+input_rds <- file.path(project_path("results/20_AUCell_lipid_metabolism_scoring"), "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
 
-step84_dir <- "D:/zz/results/84_pySCENIC_input_preparation"
+step84_dir <- project_path("results/84_pySCENIC_input_preparation")
 
 step84_state_counts <- file.path(step84_dir, "03_84_pySCENIC_myeloid_state_counts_v01.csv")
 
 step84_final_qc <- file.path(step84_dir, "13_84_pySCENIC_FINAL_QC_v01.csv")
 
-outdir <- "D:/zz/results/85_pySCENIC_GRNBoost2_input_preparation"
+outdir <- project_path("results/85_pySCENIC_GRNBoost2_input_preparation")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

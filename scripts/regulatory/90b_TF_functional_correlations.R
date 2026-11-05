@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
@@ -19,19 +21,19 @@ png_dpi <- 600
 heatmap_width_in <- 12
 heatmap_height_in <- 6.5
 
-outdir <- "D:/zz/results/90_pySCENIC_top10_TF_network_signature_correlation"
+outdir <- project_path("results/90_pySCENIC_top10_TF_network_signature_correlation")
 
-rss_ranking_file <- paste0("D:/zz/results/89_pySCENIC_RSS_target_regulon_ranking/", "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
+rss_ranking_file <- paste0(project_path("results/89_pySCENIC_RSS_target_regulon_ranking/"), "05_89_Clec7a_lipid_handling_MG_regulon_RSS_ranking_v01.csv")
 
-deg_up_file <- paste0("D:/zz/results/21_Clec7a_DEG_volcano_myeloid/", "21_Clec7a_vs_all_myeloid_DEG_up_v01.csv")
+deg_up_file <- paste0(project_path("results/21_Clec7a_DEG_volcano_myeloid/"), "21_Clec7a_vs_all_myeloid_DEG_up_v01.csv")
 
-lipid_manifest_file <- paste0("D:/zz/results/20_AUCell_lipid_metabolism_scoring/", "20_AUCell_lipid_gene_set_manifest_v03.csv")
+lipid_manifest_file <- paste0(project_path("results/20_AUCell_lipid_metabolism_scoring/"), "20_AUCell_lipid_gene_set_manifest_v03.csv")
 
-go_bp_file <- paste0("D:/zz/results/22_Clec7a_GO_KEGG_enrichment/", "22_Clec7a_GO_BP_up_v03.csv")
+go_bp_file <- paste0(project_path("results/22_Clec7a_GO_KEGG_enrichment/"), "22_Clec7a_GO_BP_up_v03.csv")
 
-kegg_file <- paste0("D:/zz/results/22_Clec7a_GO_KEGG_enrichment/", "22_Clec7a_KEGG_up_v03.csv")
+kegg_file <- paste0(project_path("results/22_Clec7a_GO_KEGG_enrichment/"), "22_Clec7a_KEGG_up_v03.csv")
 
-source_rds <- paste0("D:/zz/results/20_AUCell_lipid_metabolism_scoring/", "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
+source_rds <- paste0(project_path("results/20_AUCell_lipid_metabolism_scoring/"), "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
 
 v04_evidence_file <- file.path(outdir, "10_90_top10_TF_evidence_summary_v04.csv")
 

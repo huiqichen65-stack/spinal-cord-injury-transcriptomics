@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("monocle3", "ggplot2", "dplyr", "svglite")
@@ -14,7 +16,7 @@ suppressPackageStartupMessages({
   library(dplyr)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP26_DIR <- file.path(ROOT, "results", "26_Monocle3_keygene_pseudotime_dynamics")
 

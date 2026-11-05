@@ -1,10 +1,12 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 INPUT_CSV <- file.path(ROOT, "results", "46_Bulk_limma_temporal_DEG_analysis", "04_46_Bulk_limma_temporal_DEG_analysis_v06_PRIMARY_EstablishedLate_vs_Early.csv")
 

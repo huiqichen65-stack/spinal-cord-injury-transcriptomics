@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 VERSION <- "v01"
 IN119 <- file.path(ROOT, "results", "119_GSE281205_scDblFinder", "RDS")
 IN131 <- file.path(ROOT, "results", "131_GSE281205_myeloid_subtype_annotation_and_microglia_groups",

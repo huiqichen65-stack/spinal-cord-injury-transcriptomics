@@ -8,6 +8,17 @@ Public datasets: GSE162610, GSE196928, Figshare 17702045, GSE195783 and GSE28120
 
 Raw data and large intermediate objects are not included. Supply the inputs required by each script, including reference gene sets where used, and adapt the local data, Python environment and font paths to your machine. Manuscript Supplementary Tables contain the released tabular results.
 
+## Path configuration
+
+Scripts are intended to be run from the repository root. Local machine-specific paths are not hard-coded. By default, the repository root is used as the project root; alternative locations can be supplied through the following environment variables:
+
+- `SCI_PROJECT_ROOT`: project/data root
+- `SCI_REFERENCE_DIR`: external reference-data directory (defaults to `<project root>/reference`)
+- `PYSCENIC_PYTHON`: Python executable used for pySCENIC (defaults to `python` on `PATH`)
+- `SCI_FONT_REGULAR` / `SCI_FONT_BOLD`: optional font-file paths for figure scripts; if unset, the scripts fall back to the default sans-serif font
+
+Large input and intermediate files are not included in the repository. Reference resources should be downloaded separately and placed under the configured reference directory where required by the relevant script.
+
 ## Analysis scripts
 
 | Directory | Analysis |

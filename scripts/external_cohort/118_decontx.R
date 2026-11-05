@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 SOURCE_DIR <- file.path(ROOT, "results", "116_GSE281205_cell_QC")
 IN_RDS_DIR <- file.path(SOURCE_DIR, "RDS")
 OUT_DIR <- file.path(ROOT, "results", "118_GSE281205_DecontX")

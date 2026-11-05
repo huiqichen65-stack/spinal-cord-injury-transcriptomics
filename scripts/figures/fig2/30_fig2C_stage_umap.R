@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("Seurat", "ggplot2", "dplyr", "scales", "svglite", "ggrastr")
@@ -14,7 +16,7 @@ suppressPackageStartupMessages({
   library(ggrastr)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 RES_DIR <- file.path(ROOT, "results")
 STEP_DIR <- file.path(RES_DIR, "30_Figure2C_myeloid_timepoint_UMAP")
 dir.create(STEP_DIR, recursive = TRUE, showWarnings = FALSE)
@@ -65,7 +67,7 @@ if (is.na(INPUT_RDS)) {
   }
 
   if (is.null(obj)) {
-    stop("Could not find the 58,533-cell myeloid Seurat object with ", "'umap_myeloid_harmony30' under D:/zz/results.\n",
+    stop("Could not find the 58,533-cell myeloid Seurat object with ", "'umap_myeloid_harmony30' under the project results directory.\n",
       "Do NOT use the 59,409-cell Step 15 object for Figure 2.\n", "Please set INPUT_RDS manually to the Step 18/19 object.")
   }
 } else {

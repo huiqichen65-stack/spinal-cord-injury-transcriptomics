@@ -1,11 +1,13 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 set.seed(1234)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP62_DIR <- file.path(ROOT, "results", "62_GSE195783_joint_embedding_batch_assessment_clustering")
 

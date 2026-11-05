@@ -1,8 +1,10 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 set.seed(111)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP46_FILE <- file.path(ROOT, "results", "46_Bulk_limma_temporal_DEG_analysis", "30_46_Bulk_limma_temporal_DEG_analysis_v06_analysis_object.rds")
 

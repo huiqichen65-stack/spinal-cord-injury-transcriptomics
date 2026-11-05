@@ -1,13 +1,15 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 options(timeout = 1200)
 
 set.seed(1234)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP61_DIR <- file.path(ROOT, "results", "61_GSE195783_spatial_QC_normalization")
 

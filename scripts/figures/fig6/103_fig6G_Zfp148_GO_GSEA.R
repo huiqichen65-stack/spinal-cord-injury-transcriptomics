@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, width = 180)
 
-root <- "D:/zz"
+root <- PROJECT_ROOT
 step102_dir <- file.path(root, "results", "102_Zfp148_GO_GSEA_fullrank_v01")
 outdir <- file.path(root, "results", "103_Figure6G_Zfp148_GO_GSEA_ridgeplot_v03")
 

@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("monocle3", "SingleCellExperiment", "ggplot2", "dplyr", "ggridges", "svglite")
@@ -16,7 +18,7 @@ suppressPackageStartupMessages({
   library(ggridges)
 })
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP25_DIR <- file.path(ROOT, "results", "25_Monocle3_all_myeloid_trajectory")
 

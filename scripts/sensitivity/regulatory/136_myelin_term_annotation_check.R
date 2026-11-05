@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, width = 170)
-project_root <- "D:/zz"
+project_root <- PROJECT_ROOT
 step_id <- "136"
 version <- "v01"
 output_dir <- file.path(project_root, "results", "136_myelin_sheath_annotation_audit")

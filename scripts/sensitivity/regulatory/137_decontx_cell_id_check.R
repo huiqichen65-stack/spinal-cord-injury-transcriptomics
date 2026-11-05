@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, width = 180)
-root <- "D:/zz"
+root <- PROJECT_ROOT
 version <- "v01"
 label <- "137_DecontX_cell_ID_provenance_audit"
 out <- file.path(root, "results", label)
@@ -519,7 +521,7 @@ qc <- data.frame(check = c("Step20 focal state present", "GO:0043209 leading gen
   if (all(meaningful(atlas$ids$source))) "PASS" else "FAIL", paste(sum(!grepl("SKIP|ERROR", pr$status)),
     "of", nrow(pr)), as.character(sum(pr$n_verified_raw_corr, na.rm = TRUE)), as.character(verified_total),
   as.character(focus_total), if (nrow(gene_data)) "YES (descriptive only)" else "NO (do not infer)",
-  "NO - not identifiable", "Direct D:/zz paths, no ZIP"), interpretation = c("Step20 annotation", "Step102 existing CSV, no new GO-GSEA",
+  "NO - not identifiable", "Direct project-relative paths, no ZIP"), interpretation = c("Step20 annotation", "Step102 existing CSV, no new GO-GSEA",
   "No source assigned from expression profiles", "Inspect source-specific QC table", "May include non-focal and/or excluded cells",
   "No fuzzy/position matching", "Zero indicates unable to make a focal-specific DecontX statement",
   "No change in UMI is not proof of genuine cellular transcription", "Requires orthogonal evidence",

@@ -1,11 +1,13 @@
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 set.seed(20260930)
 
 STEP48_VERSION <- "v04"
-OUTPUT_DIR <- "D:/zz/results/48_Bulk_functional_enrichment"
+OUTPUT_DIR <- project_path("results/48_Bulk_functional_enrichment")
 
-STEP46_PRIMARY_FILE <- paste0("D:/zz/results/46_Bulk_limma_temporal_DEG_analysis/", "04_46_Bulk_limma_temporal_DEG_analysis_v06_PRIMARY_EstablishedLate_vs_Early.csv")
+STEP46_PRIMARY_FILE <- paste0(project_path("results/46_Bulk_limma_temporal_DEG_analysis/"), "04_46_Bulk_limma_temporal_DEG_analysis_v06_PRIMARY_EstablishedLate_vs_Early.csv")
 
 EXPECTED_TESTED <- 12977L
 EXPECTED_UP <- 1801L
@@ -203,7 +205,7 @@ validate_frozen_primary <- function(tab, source_path, stop_on_fail = TRUE) {
 
 load_step46_primary_direct <- function() {
   if (!file.exists(STEP46_PRIMARY_FILE)) {
-    stop("Step46 Primary file not found:\n", STEP46_PRIMARY_FILE, "\nPlease check that D:/zz/results/46_Bulk_limma_temporal_DEG_analysis/ exists.")
+    stop("Step46 Primary file not found:\n", STEP46_PRIMARY_FILE, "\nPlease check that the project results directory/46_Bulk_limma_temporal_DEG_analysis/ exists.")
   }
 
   raw <- read_table_auto(STEP46_PRIMARY_FILE)

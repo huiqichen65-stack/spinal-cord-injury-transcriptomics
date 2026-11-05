@@ -1,13 +1,15 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
 set.seed(7201)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP66_DIR <- file.path(ROOT, "results", "66_GSE195783_Clec7a_spatial_autocorrelation_neighborhood")
 

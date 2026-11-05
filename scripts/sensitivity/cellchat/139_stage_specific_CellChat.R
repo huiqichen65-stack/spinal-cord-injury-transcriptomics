@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEM <- "139_stage_refined_CellChat_spatial_validation"
 VERSION <- "v03"
 OUT <- file.path(ROOT, "results", STEM)

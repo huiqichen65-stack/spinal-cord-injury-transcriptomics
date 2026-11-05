@@ -1,12 +1,14 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 options(timeout = 1200)
 set.seed(114)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP60_DIR <- file.path(ROOT, "results", "60_GSE195783_Visium_import_coordinate_reconstruction")
 

@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
@@ -20,13 +22,13 @@ title_text_size <- 11.5
 x_tick_size <- 9
 x_title_size <- 10
 
-step91_dir <- "D:/zz/results/91_scTenifoldKnk_top5_virtual_KO"
+step91_dir <- project_path("results/91_scTenifoldKnk_top5_virtual_KO")
 
 combined_dr_file <- file.path(step91_dir, "05_91_top5_KO_diffRegulation_all_v04.csv.gz")
 
 step91_qc_file <- file.path(step91_dir, "11_91_FINAL_QC_v04.csv")
 
-outdir <- "D:/zz/results/100_Figure6F_reference_style_top5_virtual_KO_v03"
+outdir <- project_path("results/100_Figure6F_reference_style_top5_virtual_KO_v03")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

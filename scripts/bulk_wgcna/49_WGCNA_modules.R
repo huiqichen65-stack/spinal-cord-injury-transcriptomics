@@ -1,11 +1,13 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 set.seed(20260930)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP45_DIR <- file.path(ROOT, "results", "45_Bulk_batch_structure_and_analysis_object")
 

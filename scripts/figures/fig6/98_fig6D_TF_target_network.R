@@ -1,7 +1,9 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
-indir <- "D:/zz/results/98_Figure6D_Cytoscape_input_preparation"
+indir <- project_path("results/98_Figure6D_Cytoscape_input_preparation")
 
 nodes_file <- file.path(indir, "01_98_Figure6D_Cytoscape_nodes_v01.csv")
 

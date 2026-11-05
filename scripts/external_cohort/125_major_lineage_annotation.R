@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 IN_DIR <- file.path(ROOT, "results", "123_GSE281205_major_lineage_clustering")
 OUT_DIR <- file.path(ROOT, "results", "125_GSE281205_major_lineage_annotation")
 FIG_DIR <- file.path(OUT_DIR, "figures")

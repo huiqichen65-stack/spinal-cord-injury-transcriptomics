@@ -1,7 +1,9 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1)
 set.seed(1234L)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 SCRIPT_NAME <- "129_microglia_pseudotime_sensitivity_v01.R"
 OUT <- file.path(ROOT, "results", "129_microglia_pseudotime_sensitivity")
 INPUT_RDS <- file.path(ROOT, "results", "18_myeloid_annotation_cleanup", "18_myeloid_annotation_cleanup_3scRNA_v01.rds")
@@ -48,7 +50,7 @@ suppressPackageStartupMessages({
   library(ggplot2)
 })
 for (f in c(INPUT_RDS, INPUT_IDENTITY)) if (!file.exists(f)) stop("Required input missing: ", f)
-if (!dir.exists(file.path(ROOT, "script"))) stop("D:/zz/script directory missing: check ROOT")
+if (!dir.exists(file.path(ROOT, "script"))) stop("the project script directory directory missing: check ROOT")
 dir.create(OUT, recursive = TRUE, showWarnings = FALSE)
 LOG <- file.path(OUT, "129_microglia_pseudotime_sensitivity_v01.log")
 if (file.exists(LOG)) unlink(LOG)

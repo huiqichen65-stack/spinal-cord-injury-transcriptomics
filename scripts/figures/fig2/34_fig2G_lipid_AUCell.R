@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 
 required_pkgs <- c("ggplot2", "dplyr", "gghalves", "svglite")
@@ -16,7 +18,7 @@ suppressPackageStartupMessages({
 
 set.seed(1234)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 AUCELL_DIR <- file.path(ROOT, "results", "20_AUCell_lipid_metabolism_scoring")
 

@@ -1,3 +1,5 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
@@ -43,16 +45,16 @@ top_n_plot <- 10L
 
 png_dpi <- 600
 
-source_rds <- paste0("D:/zz/results/20_AUCell_lipid_metabolism_scoring/", "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
+source_rds <- paste0(project_path("results/20_AUCell_lipid_metabolism_scoring/"), "20_AUCell_lipid_metabolism_scoring_3scRNA_v03.rds")
 
-frozen_signature_file <- paste0("D:/zz/results/21_Clec7a_DEG_volcano_myeloid/", "21_Clec7a_vs_all_myeloid_DEG_up_v01.csv")
+frozen_signature_file <- paste0(project_path("results/21_Clec7a_DEG_volcano_myeloid/"), "21_Clec7a_vs_all_myeloid_DEG_up_v01.csv")
 
-step90_functional_file <- paste0("D:/zz/results/90_pySCENIC_top10_TF_network_signature_correlation/",
+step90_functional_file <- paste0(project_path("results/90_pySCENIC_top10_TF_network_signature_correlation/"),
   "06_90_Figure6E_20gene_functional_support_audit_v05.csv")
 
-step90_qc_file <- paste0("D:/zz/results/90_pySCENIC_top10_TF_network_signature_correlation/", "14_90_FINAL_QC_v05.csv")
+step90_qc_file <- paste0(project_path("results/90_pySCENIC_top10_TF_network_signature_correlation/"), "14_90_FINAL_QC_v05.csv")
 
-outdir <- "D:/zz/results/91_scTenifoldKnk_top5_virtual_KO"
+outdir <- project_path("results/91_scTenifoldKnk_top5_virtual_KO")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

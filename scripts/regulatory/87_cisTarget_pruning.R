@@ -1,9 +1,11 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
-python_exe <- "C:/Users/Jiang Wu/anaconda3/envs/pyscenic_env/python.exe"
+python_exe <- PYSCENIC_PYTHON
 
 num_workers <- 6L
 
@@ -22,7 +24,7 @@ all_modules <- FALSE
 delete_stale_partial <- TRUE
 overwrite_completed_output <- FALSE
 
-step86_dir <- "D:/zz/results/86_pySCENIC_GRNBoost2"
+step86_dir <- project_path("results/86_pySCENIC_GRNBoost2")
 
 adjacency_file <- file.path(step86_dir, "09_86_pySCENIC_GRNBoost2_adjacencies_v03.tsv.gz")
 
@@ -30,7 +32,7 @@ loom_file <- file.path(step86_dir, "06_86_pySCENIC_GRN_discovery_input_v01.loom"
 
 step86_qc_file <- file.path(step86_dir, "14_86_pySCENIC_FINAL_QC_v03.csv")
 
-resource_dir <- "D:/zz/reference/SCENIC/cisTarget_mm10_v10"
+resource_dir <- reference_path("SCENIC/cisTarget_mm10_v10")
 
 db_10kb <- file.path(resource_dir, "mm10_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather")
 
@@ -38,7 +40,7 @@ db_500bp <- file.path(resource_dir, "mm10_500bp_up_100bp_down_full_tx_v10_clust.
 
 motif_annotations <- file.path(resource_dir, "motifs-v10nr_clust-nr.mgi-m0.001-o0.0.tbl")
 
-outdir <- "D:/zz/results/87_pySCENIC_cisTarget_pruning"
+outdir <- project_path("results/87_pySCENIC_cisTarget_pruning")
 
 if (!dir.exists(outdir)) {
   dir.create(outdir, recursive = TRUE)

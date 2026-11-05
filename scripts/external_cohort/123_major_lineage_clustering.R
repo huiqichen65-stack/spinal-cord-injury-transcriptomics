@@ -1,5 +1,7 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 STEP121 <- file.path(ROOT, "results", "121_GSE281205_normalize_PCA_batch_audit")
 INPUT_RDS <- file.path(STEP121, "RDS", "121_GSE281205_singlets_DecontX_LogNorm_PCA_Harmony_v02.rds")
 FEATURE_CSV <- file.path(STEP121, "02_121_gene_feature_mapping_v02.csv")
@@ -206,7 +208,7 @@ resume_complete_v01 <- function() {
   md_save <- seu[[]]
   saveRDS(md_save, file.path(RDS_DIR, "123_GSE281205_cell_cluster_metadata_v03.rds"), compress = "gzip")
   seu@misc$step123 <- list(input = INPUT_RDS, input_step = "121_v02", assay = "DecontX corrected normalized estimates; NOT raw UMI",
-    raw_integer_UMI_source = paste0("D:/zz/results/", "119_GSE281205_scDblFinder/RDS/", "119_{GSM}_singlet_raw_counts_v02.rds"),
+    raw_integer_UMI_source = paste0(project_path("results/"), "119_GSE281205_scDblFinder/RDS/", "119_{GSM}_singlet_raw_counts_v02.rds"),
     reduction_primary = "harmony", reduction_sensitivity = "pca", dims = DIMS_USE, k_param = K_PARAM,
     resolutions = HARMONY_RESOLUTIONS, primary_cluster_column = MAIN_CLUSTER_COL, other_cluster_columns = c("cluster_harmony_r04",
       "cluster_harmony_r06", "cluster_harmony_r08", PCA_CLUSTER_COL), provisional_major_lineage_column = "provisional_major_lineage_123",
@@ -551,7 +553,7 @@ main <- function() {
   saveRDS(md_save, file.path(RDS_DIR, "123_GSE281205_cell_cluster_metadata_v03.rds"), compress = "gzip")
   if (SAVE_FULL_SEURAT_RDS) {
     seu@misc$step123 <- list(input = INPUT_RDS, input_step = "121_v02", assay = "DecontX corrected normalized estimates; NOT raw UMI",
-      raw_integer_UMI_source = paste0("D:/zz/results/", "119_GSE281205_scDblFinder/RDS/", "119_{GSM}_singlet_raw_counts_v02.rds"),
+      raw_integer_UMI_source = paste0(project_path("results/"), "119_GSE281205_scDblFinder/RDS/", "119_{GSM}_singlet_raw_counts_v02.rds"),
       reduction_primary = "harmony", reduction_sensitivity = "pca", dims = DIMS_USE, k_param = K_PARAM,
       resolutions = HARMONY_RESOLUTIONS, primary_cluster_column = MAIN_CLUSTER_COL, other_cluster_columns = c(res_cols,
         PCA_CLUSTER_COL), provisional_major_lineage_column = "provisional_major_lineage_123",

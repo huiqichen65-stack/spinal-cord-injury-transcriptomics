@@ -1250,7 +1250,7 @@ to be the first vertices-table column.
 ## sensitivity/regulatory/135_TF_candidate_comparison.R
 
 - Step 135 v02 optimized
-- INPUT: direct original files under D:/zz; NEVER reads a ZIP archive.
+- INPUT: direct original files under the configured project root; NEVER reads a ZIP archive.
 - upstream: Step20,84,88,89,90,91,92, and 135 v01 historical output.
 - RSS / sample-label-level activity / target sets / lipid co-activity: recomputed identically to 135 v01.
 - INDEPENDENT ANIMALS NOT VERIFIED: label bootstrap is descriptive ONLY.
@@ -1295,7 +1295,7 @@ to be the first vertices-table column.
 - CRITICAL LINKAGE RULES:
 - - Only exact identifiers, explicit original cell IDs, or SAMPLE-QUALIFIED 16nt barcodes may form accepted links.
 - - Any conflicting candidate, sample mismatch, or Control/PLX uncertainty invalidates the corresponding join.
-- - Source accession is never guessed; raw/corrected sources are defined by existing D:/zz input file paths.
+- - Source accession is never guessed; raw/corrected sources are defined by existing project input file paths.
 - - Barcode identity alone, approximate string matching, suffix stripping, matching by ordering, and cell-number proximity are prohibited.
 - - If an exact original-ID pair cannot be reconstructed, report failure instead of manufacturing pairings.
 - ASSAY CAUTION:
@@ -1316,7 +1316,7 @@ to be the first vertices-table column.
 - CRITICAL LINKAGE RULES:
 - - Only exact identifiers, explicit original cell IDs, or SAMPLE-QUALIFIED 16nt barcodes may form accepted links.
 - - Any conflicting candidate, sample mismatch, or Control/PLX uncertainty invalidates the corresponding join.
-- - Source accession is never guessed; raw/corrected sources are defined by existing D:/zz input file paths.
+- - Source accession is never guessed; raw/corrected sources are defined by existing project input file paths.
 - - Barcode identity alone, approximate string matching, suffix stripping, matching by ordering, and cell-number proximity are prohibited.
 - - If an exact original-ID pair cannot be reconstructed, report failure instead of manufacturing pairings.
 - ASSAY CAUTION:

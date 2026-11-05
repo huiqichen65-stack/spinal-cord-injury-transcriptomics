@@ -1,12 +1,14 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
 set.seed(1234)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 STEP64_DIR <- file.path(ROOT, "results", "64_GSE195783_spatial_cluster_marker_region_annotation")
 

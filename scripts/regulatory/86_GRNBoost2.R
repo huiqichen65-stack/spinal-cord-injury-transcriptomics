@@ -1,9 +1,11 @@
+source("config.R", local = TRUE)
+
 source("scripts/helpers/common.R", local = TRUE)
 
 options(stringsAsFactors = FALSE)
 options(width = 180)
 
-python_exe <- "C:/Users/Jiang Wu/anaconda3/envs/pyscenic_env/python.exe"
+python_exe <- PYSCENIC_PYTHON
 
 num_workers <- 6L
 grn_seed <- 8601L
@@ -12,7 +14,7 @@ use_sparse <- TRUE
 delete_stale_partial <- TRUE
 overwrite_completed_output <- FALSE
 
-outdir <- "D:/zz/results/86_pySCENIC_GRNBoost2"
+outdir <- project_path("results/86_pySCENIC_GRNBoost2")
 
 loom_file <- file.path(outdir, "06_86_pySCENIC_GRN_discovery_input_v01.loom")
 
@@ -20,7 +22,7 @@ loom_qc_file <- file.path(outdir, "07_86_pySCENIC_loom_conversion_QC_v01.csv")
 
 tf_file <- file.path(outdir, "05_86_pySCENIC_mouse_TFs_in_discovery_matrix_v01.txt")
 
-step85_qc_file <- file.path("D:/zz/results/85_pySCENIC_GRNBoost2_input_preparation", "13_85_pySCENIC_FINAL_QC_v01.csv")
+step85_qc_file <- file.path(project_path("results/85_pySCENIC_GRNBoost2_input_preparation"), "13_85_pySCENIC_FINAL_QC_v01.csv")
 
 version_tag <- "v03"
 

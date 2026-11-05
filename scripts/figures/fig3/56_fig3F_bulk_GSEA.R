@@ -1,10 +1,12 @@
 source("scripts/helpers/common.R", local = TRUE)
 
 rm(list = ls())
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE)
 options(warn = 1)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 
 GSEA_FILE <- file.path(ROOT, "results", "48_Bulk_functional_enrichment", "06_48_Bulk_functional_enrichment_v04_GSEA_GO_BP.csv")
 

@@ -1,6 +1,8 @@
+source("config.R", local = TRUE)
+
 options(stringsAsFactors = FALSE, warn = 1, scipen = 999)
 
-ROOT <- "D:/zz"
+ROOT <- PROJECT_ROOT
 IN_DIR <- file.path(ROOT, "data", "GSE281205")
 OUT_DIR <- file.path(ROOT, "results", "116_GSE281205_cell_QC")
 FIG_DIR <- file.path(OUT_DIR, "figures")
