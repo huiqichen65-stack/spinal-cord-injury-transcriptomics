@@ -1,6 +1,6 @@
 # Clec7a+ myeloid states after spinal cord injury
 
-This repository contains the analysis code used for the manuscript **“Integrated transcriptomic analyses characterize a late-stage Clec7a+ lipid-associated myeloid state after spinal cord injury.”**
+This repository contains the analysis code used for the manuscript **“Integrated transcriptomic analyses characterize a late-stage Clec7a+ lipid-handling myeloid state after spinal cord injury.”**
 
 The study integrates single-cell RNA sequencing, bulk RNA sequencing, spatial transcriptomics, cell-cell communication analysis, transcriptional regulatory-network analysis, and an independent validation cohort to characterize Clec7a+ myeloid states after spinal cord injury.
 
