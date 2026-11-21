@@ -73,33 +73,38 @@ scripts/external_cohort/130_myeloid_reclustering.R,seed_argument:seed,RANDOM_SEE
 scripts/external_cohort/130_myeloid_reclustering.R,seed_assignment:RANDOM_SEED,13001,27
 scripts/external_cohort/131_myeloid_state_annotation.R,seed_assignment:SEED,13101,30
 scripts/external_cohort/131_myeloid_state_annotation.R,set.seed,SEED,31
-scripts/external_cohort/145_naive_extension.R,seed_argument:seed,"""",300
-scripts/external_cohort/145_naive_extension.R,set.seed,seed,301
-scripts/external_cohort/145_naive_extension.R,seed_argument:seed,seed,302
-scripts/external_cohort/145_naive_extension.R,set.seed,seed,337
-scripts/external_cohort/145_naive_extension.R,set.seed,SEED_BASE_TRANSFER + sample_index,438
-scripts/external_cohort/145_naive_extension.R,set.seed,SEED_BASE_TRANSFER + 100L + sample_index,469
+scripts/external_cohort/145_naive_extension.R,seed_assignment:SEED_BASE_DECONTX,145100L,38
+scripts/external_cohort/145_naive_extension.R,seed_assignment:SEED_BASE_DBL,145200L,39
+scripts/external_cohort/145_naive_extension.R,seed_assignment:SEED_BASE_TRANSFER,145300L,40
+scripts/external_cohort/145_naive_extension.R,seed_assignment:seed,as.integer(SEED_BASE_DECONTX + sample_index),178
+scripts/external_cohort/145_naive_extension.R,set.seed,seed,181
+scripts/external_cohort/145_naive_extension.R,seed_argument:seed,seed,182
+scripts/external_cohort/145_naive_extension.R,seed_assignment:seed,as.integer(SEED_BASE_DBL + sample_index),208
+scripts/external_cohort/145_naive_extension.R,set.seed,seed,209
+scripts/external_cohort/145_naive_extension.R,set.seed,SEED_BASE_TRANSFER + sample_index,280
+scripts/external_cohort/145_naive_extension.R,set.seed,SEED_BASE_TRANSFER + 100L + sample_index,300
 scripts/figures/fig1/09_fig1A_major_celltype_umap.R,seed_argument:seed,1234,139
 scripts/figures/fig1/09_fig1A_major_celltype_umap.R,set.seed,1234,4
 scripts/figures/fig1/10_fig1B_celltype_composition.R,set.seed,1234,4
 scripts/figures/fig1/13_fig1E_stage_umap.R,set.seed,1234,4
-scripts/figures/fig2/28_fig2A_myeloid_state_umap.R,set.seed,SEED,69
+scripts/figures/fig2/28_fig2A_myeloid_state_umap.R,seed_assignment:SEED,1234,7
+scripts/figures/fig2/28_fig2A_myeloid_state_umap.R,set.seed,SEED,18
 scripts/figures/fig2/32_fig2E_Clec7a_volcano.R,seed_argument:seed,SEED,157
 scripts/figures/fig2/32_fig2E_Clec7a_volcano.R,seed_assignment:SEED,1234,5
 scripts/figures/fig2/32_fig2E_Clec7a_volcano.R,set.seed,SEED,6
-scripts/figures/fig2/34_fig2G_lipid_AUCell.R,set.seed,1234,94
-scripts/figures/fig3/52_fig3B_bulk_stage_volcanoes.R,set.seed,20260930,46
-scripts/figures/fig3/52_fig3B_bulk_stage_volcanoes.R,seed_argument:seed,20260930,533
-scripts/figures/fig3/53_fig3C_bulk_primary_volcano.R,seed_argument:seed,20260930,414
+scripts/figures/fig2/34_fig2G_lipid_AUCell.R,set.seed,1234,20
+scripts/figures/fig3/52_fig3B_bulk_stage_volcanoes.R,set.seed,20260930,8
+scripts/figures/fig3/52_fig3B_bulk_stage_volcanoes.R,seed_argument:seed,20260930,237
+scripts/figures/fig3/53_fig3C_bulk_primary_volcano.R,seed_argument:seed,20260930,177
 scripts/figures/fig4/69_fig4A_spatial_regions.R,set.seed,6905,8
 scripts/figures/fig4/70_fig4B_Clec7a_RCTD_weights.R,set.seed,7001,8
 scripts/figures/fig4/71_fig4C_niche_burden.R,set.seed,7102,9
 scripts/figures/fig4/72_fig4D_MoransI.R,set.seed,7201,9
-scripts/figures/fig6/95_fig6A_regulon_RSS.R,seed_argument:seed,9501,345
-scripts/figures/supplementary/134_suppfigS4_external_validation.R,set.seed,13401L,529
-scripts/figures/supplementary/134_suppfigS4_external_validation.R,seed_argument:seed,13401L,536
-scripts/figures/supplementary/134_suppfigS4_external_validation.R,set.seed,13404L,640
-scripts/figures/supplementary/134_suppfigS4_external_validation.R,seed_argument:seed,13404L,645
+scripts/figures/fig6/95_fig6A_regulon_RSS.R,seed_argument:seed,9501,107
+scripts/figures/supplementary/134_suppfigS4_external_validation.R,set.seed,13401L,288
+scripts/figures/supplementary/134_suppfigS4_external_validation.R,seed_argument:seed,13401L,292
+scripts/figures/supplementary/134_suppfigS4_external_validation.R,set.seed,13404L,354
+scripts/figures/supplementary/134_suppfigS4_external_validation.R,seed_argument:seed,13404L,357
 scripts/figures/supplementary/14_suppfigS1_integration_qc.R,set.seed,1234,125
 scripts/figures/supplementary/14_suppfigS1_integration_qc.R,set.seed,1234,198
 scripts/figures/supplementary/14_suppfigS1_integration_qc.R,set.seed,1234,260
@@ -187,12 +192,12 @@ scripts/sensitivity/bulk_wgcna/111_myeloid_signal_adjustment.R,set.seed,111,5
 scripts/sensitivity/bulk_wgcna/111_myeloid_signal_adjustment.R,seed_argument:seed,11101,540
 scripts/sensitivity/bulk_wgcna/111_myeloid_signal_adjustment.R,seed_argument:seed,11102,546
 scripts/sensitivity/bulk_wgcna/111_myeloid_signal_adjustment.R,set.seed,111,842
-scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,seed_argument:seed,20261118,1051
-scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,set.seed,20261118,53
-scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,set.seed,20261118,791
-scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,seed_argument:seed,20261118,894
-scripts/sensitivity/bulk_wgcna/148_proxy_sensitivity.R,set.seed,20261118,281
-scripts/sensitivity/bulk_wgcna/148_proxy_sensitivity.R,set.seed,20261118,50
+scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,set.seed,20261118,8
+scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,set.seed,20261118,348
+scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,seed_argument:seed,20261118,394
+scripts/sensitivity/bulk_wgcna/147_bulk_scale_revision.R,seed_argument:seed,20261118,456
+scripts/sensitivity/bulk_wgcna/148_proxy_sensitivity.R,set.seed,20261118,7
+scripts/sensitivity/bulk_wgcna/148_proxy_sensitivity.R,set.seed,20261118,150
 scripts/sensitivity/cellchat/139_stage_specific_CellChat.R,seed_assignment:this_seed,"SEED + match(s, STAGES)",373
 scripts/sensitivity/cellchat/139_stage_specific_CellChat.R,set.seed,this_seed,374
 scripts/sensitivity/cellchat/139_stage_specific_CellChat.R,seed_argument:seed.use,this_seed,377
