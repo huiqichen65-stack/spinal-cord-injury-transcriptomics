@@ -27,13 +27,13 @@ pySCENIC,motif database,mouse mm10 cisTarget ranking databases,Methods: pySCENIC
 scTenifoldKnk,version,1.0.3,Methods: scTenifoldKnk
 scTenifoldKnk,network genes,"up to 5,000 variable genes with mandatory candidate TF and 20-gene panel inclusion",Methods: scTenifoldKnk
 scTenifoldKnk,network construction,10 networks × 500 sampled cells; nComp=3,Methods: scTenifoldKnk
-external_validation,young specimens,"3 Young-naive, 3 at 14 dpi, and 3 at 28 dpi",Methods: Independent validation; Reviewer 1 remaining comment 1
-external_validation,naive extension QC,minimum detected genes 300; mitochondrial transcript proportion <10%,Step 145; Reviewer 1 remaining comment 1
-external_validation,naive extension state transfer,frozen Step123/128 lineage reference and Step130/131 myeloid-state reference; 30 dimensions,Step 145; Reviewer 1 remaining comment 1
-external_validation,primary target gate,predicted Microglia; transferred state 1; DecontX contamination <20%; >=2/3 Fcrls/Hexb/Cx3cr1 detected; exclude Ccr2+Ly6c2+,Step 145; Reviewer 1 remaining comment 1
-myeloid_identity_sensitivity,high-confidence rule,eligible identity scoring; finite MG/MDM/BAM scores; MG_score >= 0; MG_score > MDM_score; MG_score > BAM_score,Step 146; Reviewer 1 remaining comment 3
-bulk_DE_revision,effect-scale interpretation,difference on supplied transformed expression scale; not interpreted as log2 fold change,Step 147; Reviewer 1 remaining comment 4
-bulk_DE_revision,significance rule,BH-adjusted P < 0.05; direction determined by coefficient sign; no absolute effect-size threshold,Step 147; Reviewer 1 remaining comment 4
-bulk_DE_revision,proxy sensitivity,same 29-sample primary contrast compared with and without operational-group proxy,Step 148; Reviewer 1 remaining comment 4
-virtual_knockout_display,response family,"4,999 non-knockout genes per 5,000-gene network after excluding the directly perturbed TF from downstream-response interpretation",Figure 6F; Reviewer 1 remaining comment 8
-virtual_knockout_display,display rule,KO TF plus top 19 non-KO genes after predefined low-information symbol filtering; significance shown by BH-adjusted P < 0.05 asterisk,Figure 6F; Reviewer 1 remaining comment 8
+external_validation,young specimens,3 Young-naive; 3 at 14 dpi; 3 at 28 dpi,Methods: Independent validation
+external_validation,naive QC,minimum detected genes 300; mitochondrial transcript proportion <10%,Methods: Independent validation
+external_validation,state transfer,frozen lineage and myeloid-state references; 30 dimensions,Methods: Independent validation
+external_validation,primary target gate,predicted Microglia; transferred state 1; DecontX contamination <20%; at least 2/3 Fcrls/Hexb/Cx3cr1 detected; exclude Ccr2+Ly6c2+,Methods: Independent validation
+myeloid,high-confidence microglia-consistent rule,finite MG/MDM/BAM scores; MG_score >= 0; MG_score > MDM_score; MG_score > BAM_score,Methods: Myeloid subclustering
+bulk_DE,coefficient interpretation,difference on supplied transformed expression scale; not interpreted as log2 fold change,Methods: Bulk RNA-seq
+bulk_DE,significance rule,BH-adjusted P < 0.05; direction determined by coefficient sign; no absolute effect-size threshold,Methods: Bulk RNA-seq
+bulk_DE,operational-group proxy sensitivity,same 29-sample primary contrast compared with and without operational-group proxy,Methods: Bulk RNA-seq
+scTenifoldKnk,non-knockout response family,"4,999 non-knockout genes per 5,000-gene network after excluding the directly perturbed TF",Methods: scTenifoldKnk
+scTenifoldKnk,Figure 6F display rule,KO TF plus top 19 non-knockout genes after predefined low-information symbol filtering; BH-adjusted P < 0.05 shown by asterisk,Methods: scTenifoldKnk
