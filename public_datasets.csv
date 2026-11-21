@@ -3,4 +3,4 @@ GSE162610,GEO,discovery scRNA-seq
 GSE196928,GEO,discovery scRNA-seq; vehicle B1/B3/B7 retained
 17702045,Figshare,discovery scRNA-seq and bulk RNA-seq
 GSE195783,GEO,Visium spatial transcriptomics
-GSE281205,GEO,independent young-mouse scRNA-seq validation
+GSE281205,GEO,"independent young-mouse scRNA-seq validation; 3 Young-naive, 3 Young-14dpi, and 3 Young-28dpi specimens used in the current revision"
