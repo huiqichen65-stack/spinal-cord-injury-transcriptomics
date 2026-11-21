@@ -15,7 +15,7 @@ OUT_DIR <- file.path(ROOT, "results", "56_Figure3F_Bulk_GO_BP_GSEA_ridgeline")
 
 dir.create(OUT_DIR, recursive = TRUE, showWarnings = FALSE)
 
-PREFIX <- "56_Figure3F_Bulk_GO_BP_GSEA_ridgeline_v02"
+PREFIX <- "56_Figure3F_Bulk_GO_BP_GSEA_ridgeline_v03"
 
 FDR_CUTOFF <- 0.05
 
@@ -345,7 +345,7 @@ p <- ggplot(
   ) +
 
   labs(
-    x = expression(log[2] * "(Fold Change)"),
+    x = "Difference on supplied transformed expression scale",
     y = NULL
   ) +
 
@@ -472,10 +472,10 @@ write_csv(ridge_df[, ridge_export_cols, drop = FALSE], paste0("03_", PREFIX, "_r
 qc <- data.frame(metric = c("GSEA_CSV_source", "Step48_RDS_source", "frozen_GSEA_ranking_metric", "ridge_x_metric", 
     "ridge_membership_definition", "selected_pathways_n", "selected_positive_NES_n", "selected_negative_NES_n", 
     "selected_all_FDR_lt_0.05", "GSEA_recomputed", "leading_edge_only", "ridge_scale", "ridge_rel_min_height", 
-    "v02_analysis_changes", "panel_letter_inside_plot", "internal_plot_title"), value = c(GSEA_FILE, 
-    STEP48_RDS, "limma moderated t statistic", "Step46 Primary log2FC", "complete GO gene-set membership stored in Step48 gseaResult", 
+    "v03_analysis_changes", "panel_letter_inside_plot", "internal_plot_title"), value = c(GSEA_FILE, 
+    STEP48_RDS, "limma moderated t statistic", "Step46 Primary coefficient (source column: logFC); interpreted as difference on supplied transformed expression scale", "complete GO gene-set membership stored in Step48 gseaResult", 
     nrow(selected), sum(selected$NES > 0), sum(selected$NES < 0), all(selected$p.adjust < FDR_CUTOFF), 
-    "NO", "NO", "0.84", "0", "NONE; visual-only refinement", "NO", "NO"), stringsAsFactors = FALSE)
+    "NO", "NO", "0.84", "0", "NONE; terminology/axis-label correction only", "NO", "NO"), stringsAsFactors = FALSE)
 
 write_csv(qc, paste0("04_", PREFIX, "_plot_QC.csv"))
 
