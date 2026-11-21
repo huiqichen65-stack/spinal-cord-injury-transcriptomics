@@ -232,7 +232,7 @@ p <- ggplot(heatmap_df, aes(x = timepoint, y = display_region, fill = mean_spati
     linewidth = 0.9, width = 0.96, height = 0.96) + geom_text(aes(label = cell_label), family = "Arial", 
     size = 2.85, color = "black") + scale_fill_gradientn(colours = c(LOW_COLOR, MID_COLOR, HIGH_COLOR), 
     values = scales::rescale(c(FILL_MIN, FILL_MID, FILL_MAX), from = c(FILL_MIN, FILL_MAX)), limits = c(FILL_MIN, 
-        FILL_MAX), oob = scales::squish, name = "Section-normalized\nspatial burden") + scale_x_discrete(position = "top", 
+        FILL_MAX), oob = scales::squish, name = "Portion-normalized\nspatial burden") + scale_x_discrete(position = "top", 
     drop = FALSE) + scale_y_discrete(drop = FALSE) + labs(x = NULL, y = NULL) + theme_minimal(base_family = "Arial", 
     base_size = 9) + theme(panel.grid = element_blank(), axis.text.x = element_text(size = 9, face = "bold", 
     color = "black", margin = margin(b = 4)), axis.text.y = element_text(size = 8.2, color = "black", 
